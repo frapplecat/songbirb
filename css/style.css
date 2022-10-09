@@ -49,6 +49,10 @@ body {
     display: flex;
 }
 
+.message-container {
+ height: 30px;
+}
+
 /* .box {
     width: 60px;
     height: 60px;
