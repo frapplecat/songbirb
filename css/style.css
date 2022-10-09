@@ -1,3 +1,7 @@
+* {
+    color: #fff;
+}
+
 html,
 body {
  background: var(--default);
@@ -10,15 +14,17 @@ body {
     --right: #538d4e;
 }
 
-#game {
+#game-container {
     display: grid;
     place-items: center;
     width: 100%;
     height: 600px;
 }
 
-.grid {
+.grid-container {
     display: grid;
+    width: 300px;
+    height: 600px;
     grid-template-rows: repeat(6, auto);
     grid-template-columns: repeat(5, auto);
 }
@@ -47,4 +53,24 @@ body {
 
 .box.right {
     background-color: var(--right);
+}
+
+.key-container {
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.key-container button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--empty);
+    margin: 4px;
+}
+
+.key-container button:nth-child(11),
+.key-container button:nth-child(20) {
+    margin-left: 30px;
 }
