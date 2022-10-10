@@ -1,9 +1,11 @@
 const tileDisplay = document.querySelector('.tile-container');
 const keyboard = document.querySelector('.key-container');
+const messageDisplay = document.querySelector('.message-container');
+
 
 const songBirb = 'ROBIN';
 
-const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', '±', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '<<'];
+const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'ENT', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '«'];
 
 const guessRows = [
     ['', '', '', '', ''],
@@ -16,6 +18,7 @@ const guessRows = [
 
 let currentRow = 0;
 let currentTile = 0;
+let isGameOver = false;
 
 guessRows.forEach((guessRow, guessRowIndex) => {
     const rowElement = document.createElement('div');
@@ -29,25 +32,25 @@ guessRows.forEach((guessRow, guessRowIndex) => {
     tileDisplay.append(rowElement);
 });
 
-keys.forEach(key =>{
-  const buttonElement = document.createElement('button');
-  buttonElement.textContent = key;
-  buttonElement.setAttribute('id', key);
-  buttonElement.addEventListener('click', () => handleClick(key));
-  keyboard.append(buttonElement);
+keys.forEach(key => {
+    const buttonElement = document.createElement('button');
+    buttonElement.textContent = key;
+    buttonElement.setAttribute('id', key);
+    buttonElement.addEventListener('click', () => handleClick(key));
+    keyboard.append(buttonElement);
 });
 
 const handleClick = (letter) => {
     console.log('clicked', letter);
-    if (letter === '<<') {
-        console.log('delete letter');
+    if (letter === '«') {
+        deleteLetter();
         return;
     }
-    if (letter === '±') {
-        console.log('check row');
+    if (letter === 'ENT') {
+        checkRow();
         return;
     }
-    addLetter (letter);
+    addLetter(letter);
 };
 
 const addLetter = (letter) => {
@@ -59,5 +62,63 @@ const addLetter = (letter) => {
         currentTile++;
         console.log('guessRows', guessRows);
     }
- }
+}
 
+const deleteLetter = () => {
+    if (currentTile > 0) {
+        currentTile--
+        const tile = document.getElementById('guessRow-' + currentRow + '-tile-' + currentTile);
+        tile.textContent = "";
+        guessRows[currentRow][currentTile] = '';
+        tile.setAttribute('data', '');
+    }
+}
+
+const checkRow = () => {
+    const guess = guessRows[currentRow].join('');
+    if (currentTile > 4) {
+        console.log('guess is ' + guess, 'songBirb is ' + songBirb);
+        flipTile();
+        if (songBirb == guess) {
+            showMessage ('Magnificent!');
+            isGameOver = true;
+            return;
+        } else {
+            if (currentRow >= 5) {
+                isGameOver = false;
+                showMessage('Game Over');
+                return;
+            }
+            if (currentRow < 5) {
+                currentRow++;
+                currentTile = 0;
+
+            }
+        }
+    }
+}
+
+const showMessage = (message) => {
+    const messageElement = document.createElement('p');
+    messageElement.textContent = message;
+    messageDisplay.append(messageElement);
+    setTimeout(() => messageDisplay.removeChild(messageElement), 2000);
+}
+
+const flipTile = () => {
+    const rowTiles = document.querySelector('#guessRow-' + currentRow).childNodes;
+    rowTiles.forEach((tile, index) => {
+       const dataLetter = tile.getAttribute('data');
+
+        setTimeout(() => {
+            tile.classList.add('flip');
+            if (dataLetter == songBirb[index]) {
+                tile.classList.add('green-overlay');
+               } else if (songBirb.includes(dataLetter)) {
+                tile.classList.add('yellow-overlay');
+               } else {
+                tile.classList.add('grey-overlay');
+               }
+        }, 500 * index)    
+    })
+}
