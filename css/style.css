@@ -51,15 +51,15 @@ body {
 }
 
 .grey-overlay {
-    background-color: var(--empty);
+    background-color: var(--empty)!important;
 }
 
 .yellow-overlay {
-    background-color: var(--wrong);
+    background-color: var(--wrong)!important; 
 }
 
 .green-overlay {
-    background-color: var(--right);
+    background-color: var(--right)!important;
 }
 
 .tile.flip {

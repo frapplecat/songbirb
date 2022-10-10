@@ -3,7 +3,16 @@ const keyboard = document.querySelector('.key-container');
 const messageDisplay = document.querySelector('.message-container');
 
 
-const songBirb = 'ROBIN';
+// const songBirb = 'ROBIN';
+
+let birds = [
+    'ROBIN',
+    'SNIPE',
+    'WRENS',
+  ];
+  
+  
+const songBirb = birds[Math.floor(Math.random() * birds.length)];
 
 const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'ENT', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '«'];
 
@@ -105,20 +114,42 @@ const showMessage = (message) => {
     setTimeout(() => messageDisplay.removeChild(messageElement), 2000);
 }
 
+const addColorToKey = (keyLetter, color) => {
+    const key = document.getElementById(keyLetter);
+    key.classList.add(color);
+}
+
+
 const flipTile = () => {
     const rowTiles = document.querySelector('#guessRow-' + currentRow).childNodes;
+    let checkSongBirb = songBirb;
+    const guess = [];
+   
+    rowTiles.forEach(tile => {
+        guess.push({letter: tile.getAttribute('data'), color: 'grey-overlay'})
+    })
+
+guess.forEach((guess, index) => {
+    if (guess.letter == songBirb[index]) {
+        guess.color = 'green-overlay';
+        checkSongBirb = checkSongBirb.replace(guess.letter, '');
+    }
+})
+
+
+guess.forEach(guess => {
+    if (checkSongBirb.includes(guess.letter)) {
+        guess.color = 'yellow-overlay';
+        checkSongBirb = checkSongBirb.replace(guess.letter, '');
+    }
+})
+
+
     rowTiles.forEach((tile, index) => {
        const dataLetter = tile.getAttribute('data');
-
         setTimeout(() => {
-            tile.classList.add('flip');
-            if (dataLetter == songBirb[index]) {
-                tile.classList.add('green-overlay');
-               } else if (songBirb.includes(dataLetter)) {
-                tile.classList.add('yellow-overlay');
-               } else {
-                tile.classList.add('grey-overlay');
-               }
+            tile.classList.add(guess[index].color);
+            addColorToKey(guess[index].letter, guess[index].color);
         }, 500 * index)    
     })
 }
