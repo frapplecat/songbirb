@@ -1,21 +1,89 @@
+// SPLASH INTRO
+let intro = document.querySelector('.intro');
+let logo = document.querySelector('.logo-header');
+let logoSpan = document.querySelectorAll('.logo');
+
+window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+        logoSpan.forEach((span) => {
+            span.classList.add('active');
+        }, (+1) * 400)
+    });
+
+    setTimeout(() => {
+        logoSpan.forEach((span) => {
+
+            setTimeout(() => {
+                span.classList.remove('active');
+                span.classList.add('fade');
+            }, (+1) * 50)
+        })
+    }, 2000);
+    setTimeout(()=>{
+        intro.style.top = "-100vh"
+    }, 2300);
+})
+
+
+
+
 const tileDisplay = document.querySelector('.tile-container');
 const keyboard = document.querySelector('.key-container');
 const messageDisplay = document.querySelector('.message-container');
-
-
-// const songBirb = 'ROBIN';
 
 let birds = [
     'ROBIN',
     'SNIPE',
     'WRENS',
-  ];
-  
-  
+];
+
+
 const songBirb = birds[Math.floor(Math.random() * birds.length)];
 
 const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'ENT', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '«'];
 
+
+
+
+
+
+
+// KEYBOARD
+// const kinput = '';
+
+// kinput.onkeydown = kinput.onkeyup = kinput.onkeypress = handle;
+
+// let lastTime = Date.now();
+
+// function handle(e) {
+//   if (form.elements[e.type + 'Ignore'].checked) return;
+
+//   area.scrollTop = 1e6;
+
+//   let text = e.type +
+//     ' key=' + e.key +
+//     ' code=' + e.code +
+//     (e.shiftKey ? ' shiftKey' : '') +
+//     (e.ctrlKey ? ' ctrlKey' : '') +
+//     (e.altKey ? ' altKey' : '') +
+//     (e.metaKey ? ' metaKey' : '') +
+//     (e.repeat ? ' (repeat)' : '') +
+//     "\n";
+
+//   if (area.value && Date.now() - lastTime > 250) {
+//     area.value += new Array(81).join('-') + '\n';
+//   }
+//   lastTime = Date.now();
+
+//   area.value += text;
+
+//   if (form.elements[e.type + 'Stop'].checked) {
+//     e.preventDefault();
+//   }
+// }
+
+
+//  GUESS
 const guessRows = [
     ['', '', '', '', ''],
     ['', '', '', '', ''],
@@ -89,7 +157,7 @@ const checkRow = () => {
         console.log('guess is ' + guess, 'songBirb is ' + songBirb);
         flipTile();
         if (songBirb == guess) {
-            showMessage ('Magnificent!');
+            showMessage('Magnificent!');
             isGameOver = true;
             return;
         } else {
@@ -124,32 +192,35 @@ const flipTile = () => {
     const rowTiles = document.querySelector('#guessRow-' + currentRow).childNodes;
     let checkSongBirb = songBirb;
     const guess = [];
-   
+
     rowTiles.forEach(tile => {
-        guess.push({letter: tile.getAttribute('data'), color: 'grey-overlay'})
+        guess.push({
+            letter: tile.getAttribute('data'),
+            color: 'grey-overlay'
+        })
     })
 
-guess.forEach((guess, index) => {
-    if (guess.letter == songBirb[index]) {
-        guess.color = 'green-overlay';
-        checkSongBirb = checkSongBirb.replace(guess.letter, '');
-    }
-})
+    guess.forEach((guess, index) => {
+        if (guess.letter == songBirb[index]) {
+            guess.color = 'green-overlay';
+            checkSongBirb = checkSongBirb.replace(guess.letter, '');
+        }
+    })
 
 
-guess.forEach(guess => {
-    if (checkSongBirb.includes(guess.letter)) {
-        guess.color = 'yellow-overlay';
-        checkSongBirb = checkSongBirb.replace(guess.letter, '');
-    }
-})
+    guess.forEach(guess => {
+        if (checkSongBirb.includes(guess.letter)) {
+            guess.color = 'yellow-overlay';
+            checkSongBirb = checkSongBirb.replace(guess.letter, '');
+        }
+    })
 
 
     rowTiles.forEach((tile, index) => {
-       const dataLetter = tile.getAttribute('data');
+        const dataLetter = tile.getAttribute('data');
         setTimeout(() => {
             tile.classList.add(guess[index].color);
             addColorToKey(guess[index].letter, guess[index].color);
-        }, 500 * index)    
+        }, 500 * index)
     })
 }
