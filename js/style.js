@@ -4,10 +4,11 @@ let logo = document.querySelector('.logo-header');
 let logoSpan = document.querySelectorAll('.logo');
 
 window.addEventListener('DOMContentLoaded', () => {
+
     setTimeout(() => {
         logoSpan.forEach((span) => {
             span.classList.add('active');
-        }, (+1) * 400)
+        }, 400)
     });
 
     setTimeout(() => {
@@ -16,11 +17,13 @@ window.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 span.classList.remove('active');
                 span.classList.add('fade');
-            }, (+1) * 800)
+            })
         })
     }, 2000);
+    
+    // INTRO SPLASH ANIMATION
     setTimeout(()=>{
-        intro.style.top = "-100vh"
+        intro.style.top = "-200vh"
     }, 2300);
 })
 
@@ -46,45 +49,13 @@ const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', '
 
 
 
+// WIRED KEYBOARD
 
 
 
-// KEYBOARD
-// const kinput = '';
 
-// kinput.onkeydown = kinput.onkeyup = kinput.onkeypress = handle;
+//  GUESS ROWS 
 
-// let lastTime = Date.now();
-
-// function handle(e) {
-//   if (form.elements[e.type + 'Ignore'].checked) return;
-
-//   area.scrollTop = 1e6;
-
-//   let text = e.type +
-//     ' key=' + e.key +
-//     ' code=' + e.code +
-//     (e.shiftKey ? ' shiftKey' : '') +
-//     (e.ctrlKey ? ' ctrlKey' : '') +
-//     (e.altKey ? ' altKey' : '') +
-//     (e.metaKey ? ' metaKey' : '') +
-//     (e.repeat ? ' (repeat)' : '') +
-//     "\n";
-
-//   if (area.value && Date.now() - lastTime > 250) {
-//     area.value += new Array(81).join('-') + '\n';
-//   }
-//   lastTime = Date.now();
-
-//   area.value += text;
-
-//   if (form.elements[e.type + 'Stop'].checked) {
-//     e.preventDefault();
-//   }
-// }
-
-
-//  GUESS
 const guessRows = [
     ['', '', '', '', '', '', '', '', ''],
     ['', '', '', '', '', '', '', '', ''],
@@ -152,10 +123,12 @@ const deleteLetter = () => {
     }
 }
 
+// CHECK IF ANSWER IS CORRECT
+
 const checkRow = () => {
     const guess = guessRows[currentRow].join('');
+   
     if (currentTile > 4) {
-        console.log('guess is ' + guess, 'songBirb is ' + songBirb);
         flipTile();
         if (songBirb == guess) {
             showMessage('Magnificent!');
@@ -189,10 +162,14 @@ const addColorToKey = (keyLetter, color) => {
 }
 
 
+// TILE FLIP AND TILE COLOR CHANGE
+
 const flipTile = () => {
     const rowTiles = document.querySelector('#guessRow-' + currentRow).childNodes;
     let checkSongBirb = songBirb;
     const guess = [];
+
+    // GREY OVERLAY
 
     rowTiles.forEach(tile => {
         guess.push({
@@ -200,6 +177,8 @@ const flipTile = () => {
             color: 'grey-overlay'
         })
     })
+    
+    // GREEN OVERLAY
 
     guess.forEach((guess, index) => {
         if (guess.letter == songBirb[index]) {
@@ -208,6 +187,7 @@ const flipTile = () => {
         }
     })
 
+    // YELLOW OVERLAY
 
     guess.forEach(guess => {
         if (checkSongBirb.includes(guess.letter)) {
@@ -216,12 +196,13 @@ const flipTile = () => {
         }
     })
 
+    // FLIP
 
     rowTiles.forEach((tile, index) => {
-        const dataLetter = tile.getAttribute('data');
         setTimeout(() => {
+            tile.classList.add('flip');
             tile.classList.add(guess[index].color);
             addColorToKey(guess[index].letter, guess[index].color);
-        }, 500 * index)
+        }, 750 * index)
     })
 }

@@ -8,35 +8,21 @@
 
 /*  SPLASH INTRO */
 
-/* header {
-position: relative;
-left: 0;
-top: 0;
-width: 100%;
-height: 80px;
-}
-
-header h4 {
-    position: absolute;
-    left: 10%;
-    bottom: 1rem;
-    font-size: 1.6rem;
-} */
-
 .intro {
     position: fixed;
     z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100vh;
-    background-color: #004866;
+    height: 150vh;
+    background-color: #FAB900;
     transition: 1s;
 }
 
+
 .logo-header {
     position: absolute;
-    top: 40%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
@@ -45,7 +31,7 @@ header h4 {
 .logo {
     position: relative;
     display: inline-block;
-    bottom: -20px;
+    bottom: -100px;
     opacity: 0;
 }
 
@@ -59,21 +45,23 @@ header h4 {
 .logo.active {
     bottom: 0;
     opacity: 1;
-    transition: ease-in-out 0.5s;
+    transition: ease-in-out 2s;
 }
 
 .logo.fade {
-    bottom: 150px;
+    bottom: 100px;
     opacity: 0;
     transition: ease-in-out 0.5s;
 }
 
-
+/* HTML/BODY */
 
 html,
 body {
     background: var(--default);
 }
+
+/*  ROOT COLOURS */
 
 :root {
     --default: #006F9D;
@@ -83,6 +71,8 @@ body {
     --keyboard: #004866;
 }
 
+/*  GAME CONTAINER */
+
 .game-container {
     height: 90vh;
     display: flex;
@@ -90,11 +80,12 @@ body {
     align-items: center;
 }
 
+/* TITLE CONTAINER */
+
 .title-container {
     text-align: center;
     width: 100%;
-    height: 75px;
-    border-bottom: solid 1px var(--empty);
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,19 +93,20 @@ body {
 
 .title-container img {
     width: 100%;
-    height: 75px; 
+    height: 150px; 
 }
 
+/* TILE CONTAINER AND TILES */
 
 .tile-container {
-    width: 500px;
-    margin: 30px;
+    width: 600px;
+    margin: 100px;
 
 }
 
 .tile-container .tile {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     border: 2px solid var(--empty);
     box-sizing: border-box;
@@ -129,6 +121,8 @@ body {
     display: flex;
 }
 
+/* TILE OVERLAYS */
+
 .grey-overlay {
     background-color: var(--empty) !important;
 }
@@ -140,6 +134,8 @@ body {
 .green-overlay {
     background-color: var(--right) !important;
 }
+
+/* TILE FLIP */
 
 .tile.flip {
     animation: .5s linear flipping;
