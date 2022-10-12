@@ -35,6 +35,7 @@ let birds = [
     'ROBIN',
     'SNIPE',
     'WRENS',
+    'BLACKBIRD'
 ];
 
 
@@ -86,11 +87,11 @@ const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', '
 //  GUESS
 const guessRows = [
     ['', '', '', '', '', '', '', '', ''],
-    ['', '', '', '', ''],
-    ['', '', '', '', ''],
-    ['', '', '', '', ''],
-    ['', '', '', '', ''],
-    ['', '', '', '', '']
+    ['', '', '', '', '', '', '', '', ''],
+    ['', '', '', '', '', '', '', '', ''],
+    ['', '', '', '', '', '', '', '', ''],
+    ['', '', '', '', '', '', '', '', ''],
+    ['', '', '', '', '', '', '', '', '']
 ];
 
 let currentRow = 0;
@@ -131,7 +132,7 @@ const handleClick = (letter) => {
 };
 
 const addLetter = (letter) => {
-    if (currentTile < 5 && currentRow < 6) {
+    if (currentTile < 9 && currentRow < 6) {
         const tile = document.getElementById('guessRow-' + currentRow + '-tile-' + currentTile);
         tile.textContent = letter;
         guessRows[currentRow][currentTile] = letter;

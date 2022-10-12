@@ -49,6 +49,13 @@ header h4 {
     opacity: 0;
 }
 
+.logo2 {
+    position: relative;
+    display: inline-block;
+    bottom: -40px;
+    opacity: 0;
+}
+
 .logo.active {
     bottom: 0;
     opacity: 1;
