@@ -8,7 +8,7 @@
 
 /*  SPLASH INTRO */
 
-header {
+/* header {
 position: relative;
 left: 0;
 top: 0;
@@ -21,7 +21,7 @@ header h4 {
     left: 10%;
     bottom: 1rem;
     font-size: 1.6rem;
-}
+} */
 
 .intro {
     position: fixed;
@@ -65,7 +65,7 @@ header h4 {
 
 html,
 body {
- background: var(--default);
+    background: var(--default);
 }
 
 :root {
@@ -77,27 +77,31 @@ body {
 }
 
 .game-container {
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .title-container {
-  text-align: center;
-  width: 100%;
-  border-bottom: solid 1px var(--empty);
+    text-align: center;
+    width: 100%;
+    height: 75px;
+    border-bottom: solid 1px var(--empty);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .tile-container {
-    width: 330px;
+    width: 500px;
     margin: 30px;
 
 }
 
-.tile-container .tile{
-    width: 60px;
-    height: 60px;
+.tile-container .tile {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     border: 2px solid var(--empty);
     box-sizing: border-box;
@@ -107,20 +111,21 @@ body {
     margin: 2px;
 
 }
+
 .tile-container div {
     display: flex;
 }
 
 .grey-overlay {
-    background-color: var(--empty)!important;
+    background-color: var(--empty) !important;
 }
 
 .yellow-overlay {
-    background-color: var(--wrong)!important; 
+    background-color: var(--wrong) !important;
 }
 
 .green-overlay {
-    background-color: var(--right)!important;
+    background-color: var(--right) !important;
 }
 
 .tile.flip {
@@ -131,9 +136,11 @@ body {
     0% {
         transform: rotateX(0deg);
     }
+
     50% {
         transform: rotateX(90deg);
     }
+
     100% {
         transform: rotateX(0deg);
     }
@@ -141,7 +148,7 @@ body {
 
 
 .message-container {
- height: 30px;
+    height: 30px;
 }
 
 .message-container p {
@@ -149,7 +156,7 @@ body {
     border-radius: 10px;
     padding: 10px;
     margin: 0;
-   }
+}
 
 
 .key-container {

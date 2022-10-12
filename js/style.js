@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 span.classList.remove('active');
                 span.classList.add('fade');
-            }, (+1) * 50)
+            }, (+1) * 800)
         })
     }, 2000);
     setTimeout(()=>{
@@ -85,7 +85,7 @@ const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', '
 
 //  GUESS
 const guessRows = [
-    ['', '', '', '', ''],
+    ['', '', '', '', '', '', '', '', ''],
     ['', '', '', '', ''],
     ['', '', '', '', ''],
     ['', '', '', '', ''],
