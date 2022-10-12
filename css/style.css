@@ -100,6 +100,12 @@ body {
     align-items: center;
 }
 
+.title-container img {
+    width: 100%;
+    height: 75px; 
+}
+
+
 .tile-container {
     width: 500px;
     margin: 30px;
