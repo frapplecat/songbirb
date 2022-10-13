@@ -35,10 +35,15 @@ const keyboard = document.querySelector('.key-container');
 const messageDisplay = document.querySelector('.message-container');
 
 let birds = [
-    'ROBIN',
-    'SNIPE',
-    'WRENS',
-    'BLACKBIRD'
+    'GOLDCREST',
+    'FIRECREST',
+    'BRAMBLING',
+    'FIELDFARE',
+    'BLACKBIRD',
+    'GOLDFINCH',
+    'CORNCRAKE',
+    'BULLFINCH',
+    'CHAFFINCH'
 ];
 
 
