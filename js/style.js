@@ -53,14 +53,78 @@ const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', '
 
 // AUDIO BUTTON
 
-// const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
-// const buttons = document.querySelectorAll("button");
+// let audio =  new Audio;
+// let button = document.getElementsByClassName('birdsongbutton');
+
+// let birdsong = [
+//     'assets/audio/goldcrest-regulus-regulus.mp3',
+//     'assets/audio/firecrest-regulus-ignicapilla.mp3',
+//     'assets/audio/brambling-fringilla-montifringilla.mp3',
+//     'assets/audio/fieldfare-turdus-pilaris.mp3',
+//     'assets/audio/blackbird-turdus-merula.mp3',
+//     'assets/audio/goldfinch-carduelis-carduelis.mp3',
+//     'assets/audio/corncrake-crex-crex.mp3',
+//     'assets/audio/bullfinch-pyrrhula-pyrrhula.mp3',
+//     'CHAFassets/audio/chaffinch-Fringilla-coelebs.mp3'  
+// ];
+
+// button.forEach(button => {
+// button.addEventListener("click", () => {
+// audio.play();
+// });
+// });
+
+
+// let audio = new Audio('assets/audio/blackbird-turdus-merula.mp3');
+// let buttons = document.querySelectorAll("button");
 
 // buttons.forEach(button => {
 //   button.addEventListener("click", () => {
 //     audio.play();
 //   });
 // });
+
+const audioUrls = [
+    'assets/audio/goldcrest-regulus-regulus.mp3',
+    'assets/audio/firecrest-regulus-ignicapilla.mp3',
+    'assets/audio/brambling-fringilla-montifringilla.mp3',
+    'assets/audio/fieldfare-turdus-pilaris.mp3',
+    'assets/audio/blackbird-turdus-merula.mp3',
+    'assets/audio/goldfinch-carduelis-carduelis.mp3',
+    'assets/audio/corncrake-crex-crex.mp3',
+    'assets/audio/bullfinch-pyrrhula-pyrrhula.mp3',
+    'assets/audio/chaffinch-Fringilla-coelebs.mp3' 
+    ];
+    
+    const randomAudio = () => {
+      const index = Math.floor(Math.random() * audioUrls.length);
+      const audioUrl = audioUrls[index];
+      
+      return audioUrl;
+    }
+    
+    audioButton.addEventListener("click", () => {
+      audio.addEventListener("ended", () => {
+        const audioUrl = randomAudio();
+        
+        const temp = new Audio();
+        
+        temp.addEventListener("loadeddata", () => {
+          audio.src = audioUrl;
+      });
+        
+        temp.src = audioUrl;
+      })
+      
+      const audioUrl = randomAudio();
+      
+      audio.addEventListener("loadeddata", () => {
+          audio.play();
+      });
+      
+      audio.src = audioUrl;
+      
+    })
 
 
 
