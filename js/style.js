@@ -71,7 +71,6 @@ const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', '
 
 
 
-
 //  GUESS ROWS 
 
 const guessRows = [
