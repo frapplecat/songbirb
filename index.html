@@ -29,11 +29,21 @@
         </div>
         <!-- BUTTONS -->
         <div class="birdsongaudio">
-            <audio id="audio" src="" preload="auto" loop></audio>
-            <button id="audioButton">Play</button>
-            <!-- <button class="birdsongbutton button">Play</button> -->
-            <button class="button">Rules</button>
-            <button class="button">Info</button>
+            <!-- <audio id="audio" src=""></audio> -->
+            <button id="playpausebtn"></button>
+            <button id="playnextbtn"></button>
+            <!-- MODAL OVERLAY -->
+            <button data-modal-target="#modal" id="modalinfobtn"></button>
+            <div id="modal" class="modal">
+                <div class="modalheader">
+                    <div class="modaltitle">About SongBirb</div>
+                    <button data-modal-close class="closemodal">&times;</button>
+                </div>
+                <div class="modalbody">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi eius adipisci nesciunt nobis sapiente temporibus sunt accusantium nisi unde itaque? Maxime facere sint temporibus explicabo hic! Nobis inventore aut aperiam?
+                </div>
+            </div>
+            <div id="modaloverlay"></div>
         </div>
         <!-- MESSAGE CONTAINER -->
         <div class="message-container"></div>

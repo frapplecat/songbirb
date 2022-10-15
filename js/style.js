@@ -27,12 +27,58 @@ window.addEventListener('DOMContentLoaded', () => {
     }, 2300);
 })
 
+// MODAL OVERLAY
+
+const openModalButtons = document.querySelectorAll('[data-modal-target]');
+const closeModalButtons = document.querySelectorAll('[data-modal-close]');
+const overlay = document.getElementById('modaloverlay');
+
+openModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = document.querySelector(button.dataset.modalTarget);
+        openModal(modal);
+    })
+})
+
+closeModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = button.closest ('.modal')
+        closeModal(modal);
+    })
+})
+
+overlay.addEventListener('click', () => {
+    const modals = document.querySelectorAll('.modal.active');
+    modals.forEach(modal => {
+        closeModal(modal);
+    } )
+})
+
+function openModal(modal) {
+    if (modal == null)
+    return
+    modal.classList.add('active');
+    overlay.classList.add('active');
+}
+
+function closeModal(modal) {
+    if (modal == null)
+    return
+    modal.classList.remove('active');
+    overlay.classList.remove('active');
+}
+
+
 
 
 
 const tileDisplay = document.querySelector('.tile-container');
 const keyboard = document.querySelector('.key-container');
 const messageDisplay = document.querySelector('.message-container');
+
+// let birds = [
+//     {word: 'GOLDCREST', sound: 'assets/audio/corncrake-crex-crex.mp3'},
+// ];
 
 let birds = [
     'GOLDCREST',
@@ -46,17 +92,13 @@ let birds = [
     'CHAFFINCH'
 ];
 
-
 const songBirb = birds[Math.floor(Math.random() * birds.length)];
 
 const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'ENT', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '«'];
 
 // AUDIO BUTTON
 
-// let audio =  new Audio;
-// let button = document.getElementsByClassName('birdsongbutton');
-
-// let birdsong = [
+// const audioUrls = [
 //     'assets/audio/goldcrest-regulus-regulus.mp3',
 //     'assets/audio/firecrest-regulus-ignicapilla.mp3',
 //     'assets/audio/brambling-fringilla-montifringilla.mp3',
@@ -65,70 +107,73 @@ const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', '
 //     'assets/audio/goldfinch-carduelis-carduelis.mp3',
 //     'assets/audio/corncrake-crex-crex.mp3',
 //     'assets/audio/bullfinch-pyrrhula-pyrrhula.mp3',
-//     'CHAFassets/audio/chaffinch-Fringilla-coelebs.mp3'  
-// ];
-
-// button.forEach(button => {
-// button.addEventListener("click", () => {
-// audio.play();
-// });
-// });
-
-
-// let audio = new Audio('assets/audio/blackbird-turdus-merula.mp3');
-// let buttons = document.querySelectorAll("button");
-
-// buttons.forEach(button => {
-//   button.addEventListener("click", () => {
-//     audio.play();
-//   });
-// });
-
-const audioUrls = [
-    'assets/audio/goldcrest-regulus-regulus.mp3',
-    'assets/audio/firecrest-regulus-ignicapilla.mp3',
-    'assets/audio/brambling-fringilla-montifringilla.mp3',
-    'assets/audio/fieldfare-turdus-pilaris.mp3',
-    'assets/audio/blackbird-turdus-merula.mp3',
-    'assets/audio/goldfinch-carduelis-carduelis.mp3',
-    'assets/audio/corncrake-crex-crex.mp3',
-    'assets/audio/bullfinch-pyrrhula-pyrrhula.mp3',
-    'assets/audio/chaffinch-Fringilla-coelebs.mp3' 
-    ];
+//     'assets/audio/chaffinch-Fringilla-coelebs.mp3' 
+//     ];
     
-    const randomAudio = () => {
-      const index = Math.floor(Math.random() * audioUrls.length);
-      const audioUrl = audioUrls[index];
-      
-      return audioUrl;
-    }
+//     const randomAudio = () => {
+//       const index = Math.floor(Math.random() * audioUrls.length);
+//       const audioUrl = audioUrls[index];
+//       return audioUrl;
+//     }
     
-    audioButton.addEventListener("click", () => {
-      audio.addEventListener("ended", () => {
-        const audioUrl = randomAudio();
+//     playpauseButton.addEventListener("click", () => {
+//       audio.addEventListener("ended", () => {
+//         const audioUrl = randomAudio();
         
-        const temp = new Audio();
+//         const temp = new Audio();
         
-        temp.addEventListener("loadeddata", () => {
-          audio.src = audioUrl;
-      });
+//         temp.addEventListener("loadeddata", () => {
+//           audio.src = audioUrl;
+//       });
         
-        temp.src = audioUrl;
-      })
+//         temp.src = audioUrl;
+//       })
       
-      const audioUrl = randomAudio();
+//       const audioUrl = randomAudio();
       
-      audio.addEventListener("loadeddata", () => {
-          audio.play();
-      });
+//       audio.addEventListener("loadeddata", () => {
+//           audio.play();
+//       });
       
-      audio.src = audioUrl;
+//       audio.src = audioUrl;
       
-    })
+//     })
 
+// NEW AUDIO BUTTONS
 
-
-
+// var audio, playbtn;
+// const audioUrls = [
+//     'assets/audio/goldcrest-regulus-regulus.mp3',
+//     'assets/audio/firecrest-regulus-ignicapilla.mp3',
+//     'assets/audio/brambling-fringilla-montifringilla.mp3',
+//     'assets/audio/fieldfare-turdus-pilaris.mp3',
+//     'assets/audio/blackbird-turdus-merula.mp3',
+//     'assets/audio/goldfinch-carduelis-carduelis.mp3',
+//     'assets/audio/corncrake-crex-crex.mp3',
+//     'assets/audio/bullfinch-pyrrhula-pyrrhula.mp3',
+//     'assets/audio/chaffinch-Fringilla-coelebs.mp3' 
+//     ];
+// function initAudioPlayer () {
+//     audio = new Audio ();
+//     audio.src = audioUrls;
+//     audio.loop = false;
+//     audio.play ();
+//     // SET OBJECT REFERENCES
+//     playbtn = document.getElementById('playpausebtn');
+//     // ADD EVENT HANDLING
+//     playbtn.addEventListener('click', playPause);
+//     // PLAY PAUSE FUNCTION
+//     function playPause () {
+//         if(audio.paused) {
+//             audio.play();
+//             playbtn.style.background = 'url(assets/images/audiotestpause.svg) no-repeat';
+//         } else {
+//             audio.pause();
+//             playbtn.style.background = 'url(assets/images/audiotestplay.svg) no-repeat';
+//         }
+//     }
+// }
+// window.addEventListener('load', initAudioPlayer);
 
 
 // WIRED KEYBOARD
@@ -241,7 +286,6 @@ const addColorToKey = (keyLetter, color) => {
     const key = document.getElementById(keyLetter);
     key.classList.add(color);
 }
-
 
 // TILE FLIP AND TILE COLOR CHANGE
 

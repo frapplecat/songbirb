@@ -103,42 +103,134 @@ body {
     height: 150px;
 }
 
+/* MODAL OVERLAY */
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    height: 600px;
+    max-width: 80%;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modalbody,
+.modaltitle {
+    color: black;
+    padding: 10px 15px;
+}
+
+.modalheader {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.modalheader .modaltitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.modalheader .closemodal {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: black;
+}
+
+#modaloverlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+
+#modaloverlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+
 
 /* AUDIO BUTTON */
 
-#audioButton {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 2px;
-    border-color: #FAB900;
-    font-size: 1rem;
-    color: #fff;
-    background: #034d85;
-    transition: opacity .2s;
-    margin: 10px;
-}
-#audioButton,
-.button,
-.birdsongbutton {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 2px;
-    border-color: #FAB900;
-    font-size: 1rem;
-    color: #fff;
-    background: #034d85;
-    transition: opacity .2s;
-    margin: 10px;
+#playpausebtn,
+#playnextbtn,
+#modalinfobtn {
+    background: url(../assets/images/audiotestplay.svg) no-repeat;
+    background-size: cover;
+    border: none;
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
 }
 
-#audioButton:hover,
-.button:hover,
-.birdsongbutton:hover {
+#playpausebtn {
+    background: url(../assets/images/audiotestplay.svg) no-repeat;
+}
+
+#playnextbtn {
+    background: url(../assets/images/audiotestnext.svg) no-repeat;
+}
+
+#modalinfobtn {
+    background: url(../assets/images/audiotestinfo.svg) no-repeat;
+}
+
+/* #playpauseButton {
+    background: url(../assets/images/audiotestplay.svg);
+}
+
+#playnextButton {
+    background: url(../assets/images/audiotest);
+}
+
+#playpauseButton,
+#playnextButton,
+#modalinfoButton {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px;
+    border-color: #FAB900;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #034d85;
+    transition: opacity .2s;
+    margin: 10px;
+} */
+
+/* #playpauseButton:hover{
+    background: url(../assets/images/audiotestplay.svg);
+}
+
+
+#playpauseButton:hover,
+#playnextButton:hover,
+#infoButton:hover {
     cursor: pointer;
     background: #053056;
-}
+} */
 
 /* TILE CONTAINER AND TILES */
 
