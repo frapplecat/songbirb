@@ -20,9 +20,9 @@ window.addEventListener('DOMContentLoaded', () => {
             })
         })
     }, 2000);
-    
+
     // INTRO SPLASH ANIMATION
-    setTimeout(()=>{
+    setTimeout(() => {
         intro.style.top = "-200vh"
     }, 2300);
 })
@@ -42,7 +42,7 @@ openModalButtons.forEach(button => {
 
 closeModalButtons.forEach(button => {
     button.addEventListener('click', () => {
-        const modal = button.closest ('.modal')
+        const modal = button.closest('.modal')
         closeModal(modal);
     })
 })
@@ -51,19 +51,19 @@ overlay.addEventListener('click', () => {
     const modals = document.querySelectorAll('.modal.active');
     modals.forEach(modal => {
         closeModal(modal);
-    } )
+    })
 })
 
 function openModal(modal) {
     if (modal == null)
-    return
+        return
     modal.classList.add('active');
     overlay.classList.add('active');
 }
 
 function closeModal(modal) {
     if (modal == null)
-    return
+        return
     modal.classList.remove('active');
     overlay.classList.remove('active');
 }
@@ -82,16 +82,16 @@ const cover = document.querySelector('#cover');
 
 // BIRD SONGS
 
-const songs = ['corncrake', 'blackbird', 'goldfinch','blackbird', 'brambling', 'bullfinch','corncrake', 'fieldfare', 'firecrest', 'goldcrest'];
+const songs = ['goldcrest', 'firecrest', 'brambling', 'fieldfare', 'blackbird', 'goldfinch', 'corncrake', 'bullfinch', 'chaffinch'];
+
 
 // KEEP TRACK OF SONGS
 // let songIndex = [0];
 
-function random_song(songs)
-{
-  
-return songs[Math.floor(Math.random()*songs.length)];
-     
+function random_song(songs) {
+
+    return songs[Math.floor(Math.random() * songs.length)];
+
 }
 
 let songIndex = random_song(songs);
@@ -124,32 +124,35 @@ function pauseSong() {
     audio.pause()
 }
 
-function prevSong () {
+function prevSong() {
     songIndex--
-    if(songIndex < 0) {
-        songIndex = songs.length -1
+    if (songIndex < 0) {
+        songIndex = songs.length - 1
     }
     loadSong(random_song(songs))
     playSong()
 }
 
-function nextSong () {
+function nextSong() {
     songIndex++
 
-    if(songIndex > songs.length -1) {
+    if (songIndex > songs.length - 1) {
         songIndex = 0
     }
     loadSong(random_song(songs))
     playSong()
 }
 
-function updateProgress (e) {
-    const {duration, currentTime} = e.srcElement;
+function updateProgress(e) {
+    const {
+        duration,
+        currentTime
+    } = e.srcElement;
     const progressPercent = (currentTime / duration) * 100;
     progress.style.width = `${progressPercent}%`
 }
 
-function setProgress (e) {
+function setProgress(e) {
     const width = this.clientWidth;
     const clickX = e.offsetX;
     const duration = audio.duration;
@@ -208,11 +211,10 @@ const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', '
 
 // WIRED KEYBOARD LINK TO VIRTUAL KEYBOARD
 
-document.addEventListener("keypress", (event) => {
+document.addEventListener('keypress', (event) => {
     const element = document.getElementById(`${event.key.toUpperCase()}`);
     element.click()
-  });
-
+});
 
 //  GUESS ROWS 
 
@@ -287,7 +289,7 @@ const deleteLetter = () => {
 
 const checkRow = () => {
     const guess = guessRows[currentRow].join('');
-   
+
     if (currentTile > 4) {
         flipTile();
         if (songBirb == guess) {
@@ -317,11 +319,12 @@ const showMessage = (message) => {
     refreshButton.innerHTML = "Click here!";
     messageDisplay.append(messageElement);
     messageElement.append(refreshButton);
+
     function reloadPage() {
-      window.location.reload();
+        window.location.reload();
     }
     refreshButton.addEventListener("click", reloadPage);
-  };
+};
 
 // const showMessage = (message) => {
 //     const messageElement = document.createElement('p');
@@ -352,7 +355,7 @@ const flipTile = () => {
             color: 'grey-overlay'
         })
     })
-    
+
     // GREEN OVERLAY
 
     guess.forEach((guess, index) => {
