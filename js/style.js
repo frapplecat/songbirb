@@ -96,84 +96,106 @@ const songBirb = birds[Math.floor(Math.random() * birds.length)];
 
 const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'ENT', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '«'];
 
-// AUDIO BUTTON
+// AUDIO BUTTONS
 
-// const audioUrls = [
-//     'assets/audio/goldcrest-regulus-regulus.mp3',
-//     'assets/audio/firecrest-regulus-ignicapilla.mp3',
-//     'assets/audio/brambling-fringilla-montifringilla.mp3',
-//     'assets/audio/fieldfare-turdus-pilaris.mp3',
-//     'assets/audio/blackbird-turdus-merula.mp3',
-//     'assets/audio/goldfinch-carduelis-carduelis.mp3',
-//     'assets/audio/corncrake-crex-crex.mp3',
-//     'assets/audio/bullfinch-pyrrhula-pyrrhula.mp3',
-//     'assets/audio/chaffinch-Fringilla-coelebs.mp3' 
-//     ];
-    
-//     const randomAudio = () => {
-//       const index = Math.floor(Math.random() * audioUrls.length);
-//       const audioUrl = audioUrls[index];
-//       return audioUrl;
-//     }
-    
-//     playpauseButton.addEventListener("click", () => {
-//       audio.addEventListener("ended", () => {
-//         const audioUrl = randomAudio();
-        
-//         const temp = new Audio();
-        
-//         temp.addEventListener("loadeddata", () => {
-//           audio.src = audioUrl;
-//       });
-        
-//         temp.src = audioUrl;
-//       })
-      
-//       const audioUrl = randomAudio();
-      
-//       audio.addEventListener("loadeddata", () => {
-//           audio.play();
-//       });
-      
-//       audio.src = audioUrl;
-      
-//     })
+const musicContainer = document.querySelector('.music-container');
+const playBtn = document.querySelector('#play');
+const prevBtn = document.querySelector('#prev');
+const nextBtn = document.querySelector('#next');
+const audio = document.querySelector('#audio');
+const progress = document.querySelector('.progress');
+const progressContainer = document.querySelector('.progress-container');
+const title = document.querySelector('#title');
+const cover = document.querySelector('#cover');
 
-// NEW AUDIO BUTTONS
+// BIRD SONGS
 
-// var audio, playbtn;
-// const audioUrls = [
-//     'assets/audio/goldcrest-regulus-regulus.mp3',
-//     'assets/audio/firecrest-regulus-ignicapilla.mp3',
-//     'assets/audio/brambling-fringilla-montifringilla.mp3',
-//     'assets/audio/fieldfare-turdus-pilaris.mp3',
-//     'assets/audio/blackbird-turdus-merula.mp3',
-//     'assets/audio/goldfinch-carduelis-carduelis.mp3',
-//     'assets/audio/corncrake-crex-crex.mp3',
-//     'assets/audio/bullfinch-pyrrhula-pyrrhula.mp3',
-//     'assets/audio/chaffinch-Fringilla-coelebs.mp3' 
-//     ];
-// function initAudioPlayer () {
-//     audio = new Audio ();
-//     audio.src = audioUrls;
-//     audio.loop = false;
-//     audio.play ();
-//     // SET OBJECT REFERENCES
-//     playbtn = document.getElementById('playpausebtn');
-//     // ADD EVENT HANDLING
-//     playbtn.addEventListener('click', playPause);
-//     // PLAY PAUSE FUNCTION
-//     function playPause () {
-//         if(audio.paused) {
-//             audio.play();
-//             playbtn.style.background = 'url(assets/images/audiotestpause.svg) no-repeat';
-//         } else {
-//             audio.pause();
-//             playbtn.style.background = 'url(assets/images/audiotestplay.svg) no-repeat';
-//         }
-//     }
-// }
-// window.addEventListener('load', initAudioPlayer);
+const songs = ['corncrake', 'blackbird', 'goldfinch'];
+
+// KEEP TRACK OF SONGS
+let songIndex = 2;
+
+// INITIALLY LOAD SONG INTO DOM
+loadSong(songs[songIndex]);
+
+// UPDATE SONG DETAILS
+function loadSong(song) {
+    title.innerText = song
+    audio.src = `assets/audio/${song}.mp3`;
+    cover.src = `assets/images/${song}.jpg`
+}
+
+function playSong() {
+    musicContainer.classList.add('play')
+    playBtn.querySelector('i.fa-solid').classList.remove('fa-play')
+    playBtn.querySelector('i.fa-solid').classList.add('fa-pause')
+
+    audio.play()
+}
+
+function pauseSong() {
+    musicContainer.classList.remove('play')
+    playBtn.querySelector('i.fa-solid').classList.add('fa-play')
+    playBtn.querySelector('i.fa-solid').classList.remove('fa-pause')
+
+    audio.pause()
+}
+
+function prevSong () {
+    songIndex--
+    if(songIndex < 0) {
+        songIndex = songs.length -1
+    }
+    loadSong(songs[songIndex])
+    playSong()
+}
+
+function nextSong () {
+    songIndex++
+
+    if(songIndex > songs.length -1) {
+        songIndex = 0
+    }
+    loadSong(songs[songIndex])
+    playSong()
+}
+
+function updateProgress (e) {
+    const {duration, currentTime} = e.srcElement;
+    const progressPercent = (currentTime / duration) * 100;
+    progress.style.width = `${progressPercent}%`
+}
+
+function setProgress (e) {
+    const width = this.clientWidth;
+    const clickX = e.offsetX;
+    const duration = audio.duration;
+
+    audio.currentTime = (clickX / width) * duration;
+}
+
+//  EVENT LISTENERS
+
+playBtn.addEventListener('click', () => {
+    const isPlaying = musicContainer.classList.contains('play')
+
+    if (isPlaying) {
+        pauseSong()
+    } else {
+        playSong()
+    }
+})
+
+// CHANGE SONG EVENTS
+prevBtn.addEventListener('click', prevSong)
+nextBtn.addEventListener('click', nextSong)
+
+audio.addEventListener('timeupdate', updateProgress)
+
+progressContainer.addEventListener('click', setProgress)
+
+// audio.addEventListener('ended', nextSong);
+
 
 
 // WIRED KEYBOARD
@@ -263,7 +285,7 @@ const checkRow = () => {
         } else {
             if (currentRow >= 5) {
                 isGameOver = false;
-                showMessage('Game Over');
+                showMessage('Unlucky, the answer was:. Want to try again?');
                 return;
             }
             if (currentRow < 5) {
@@ -275,12 +297,28 @@ const checkRow = () => {
     }
 }
 
+// RESET GAME
 const showMessage = (message) => {
-    const messageElement = document.createElement('p');
+    const messageElement = document.createElement("p");
+    const refreshButton = document.createElement("button");
     messageElement.textContent = message;
+    refreshButton.innerHTML = "Click here!";
     messageDisplay.append(messageElement);
-    setTimeout(() => messageDisplay.removeChild(messageElement), 2000);
-}
+    messageElement.append(refreshButton);
+    function reloadPage() {
+      window.location.reload();
+    }
+    refreshButton.addEventListener("click", reloadPage);
+  };
+
+// const showMessage = (message) => {
+//     const messageElement = document.createElement('p');
+//     messageElement.textContent = message;
+//     messageDisplay.append(messageElement);
+//     setTimeout(() => messageDisplay.removeChild(messageElement), 2000);
+// }
+
+// ADD COLOR TO KEYS
 
 const addColorToKey = (keyLetter, color) => {
     const key = document.getElementById(keyLetter);

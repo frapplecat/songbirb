@@ -27,12 +27,32 @@
         <div class="title-container">
             <h1><img src="assets/images/songbirb-logo-white.svg" alt="songBirb logo"></h1>
         </div>
-        <!-- BUTTONS -->
-        <div class="birdsongaudio">
-            <!-- <audio id="audio" src=""></audio> -->
-            <button id="playpausebtn"></button>
-            <button id="playnextbtn"></button>
+        <!-- AUDIO BUTTONS -->
+        <div class="music-container">
+            <div class="music-info">
+                <h4 id="title">corncrake</h4>
+                <div class="progress-container">
+                    <div class="progress"></div>
+                </div>
+            </div>
+            <audio src="assets/audio/corncrake.mp3" id='audio'></audio>
+            <div class="img-container">
+                <img src="assets/images/corncrake.jpg" alt="corncrake in field" id="cover">
+            </div>
+            <div class="navigation">
+                <button id="prev" class="action-btn">
+                    <i class="fa-solid fa-backward"></i>
+                </button>
+                <button id="play" class="action-btn action-btn-big">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+                <button id="next" class="action-btn">
+                    <i class="fa-solid fa-forward"></i>
+                </button>
+            </div>
+        </div>
             <!-- MODAL OVERLAY -->
+        <div>
             <button data-modal-target="#modal" id="modalinfobtn"></button>
             <div id="modal" class="modal">
                 <div class="modalheader">
@@ -53,6 +73,8 @@
         <div class="key-container"></div>
     </div>
     <script src="js/style.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/6fdd90d8e5.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

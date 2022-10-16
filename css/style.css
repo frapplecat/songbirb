@@ -10,7 +10,7 @@
 
 .intro {
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     left: 0;
     top: 0;
     width: 100%;
@@ -110,7 +110,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
-    transition: 200ms ease-in-out;
+    transition: 100ms ease-in-out;
     border: 1px solid black;
     border-radius: 10px;
     z-index: 10;
@@ -156,7 +156,7 @@ body {
 #modaloverlay {
     position: fixed;
     opacity: 0;
-    transition: 200ms ease-in-out;
+    transition: 100ms ease-in-out;
     top: 0;
     left: 0;
     right: 0;
@@ -172,10 +172,8 @@ body {
 
 
 
-/* AUDIO BUTTON */
+/* MODAL INFO BUTTON */
 
-#playpausebtn,
-#playnextbtn,
 #modalinfobtn {
     background: url(../assets/images/audiotestplay.svg) no-repeat;
     background-size: cover;
@@ -185,52 +183,151 @@ body {
     cursor: pointer;
 }
 
-#playpausebtn {
-    background: url(../assets/images/audiotestplay.svg) no-repeat;
-}
-
-#playnextbtn {
-    background: url(../assets/images/audiotestnext.svg) no-repeat;
-}
-
 #modalinfobtn {
     background: url(../assets/images/audiotestinfo.svg) no-repeat;
 }
 
-/* #playpauseButton {
-    background: url(../assets/images/audiotestplay.svg);
+/* AUDIO BUTTON */
+
+/* body {
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(0deg, rgb(247, 247, 247) 23.8%, rgb(252, 221, 221) 92%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+} */
+
+.music-container {
+    background-color: #006F9D;
+    border-radius: 15px;
+    box-shadow: 0 20px 20px 0 rgba(10, 45, 60, 0.6);
+    display: flex;
+    padding: 20px 30px;
+    position: relative;
+    margin: 100px 0;
+    /* z-index: 10; */
 }
 
-#playnextButton {
-    background: url(../assets/images/audiotest);
+.img-container {
+    width: 110px;
+    position: relative;
 }
 
-#playpauseButton,
-#playnextButton,
-#modalinfoButton {
-    width: 50px;
-    height: 50px;
+.img-container::after{
+    content: '';
+    background-color: #fff;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
     border-radius: 50%;
-    border: 2px;
-    border-color: #FAB900;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #034d85;
-    transition: opacity .2s;
-    margin: 10px;
-} */
+    transform: translate(-50%, -50%);
 
-/* #playpauseButton:hover{
-    background: url(../assets/images/audiotestplay.svg);
 }
 
 
-#playpauseButton:hover,
-#playnextButton:hover,
-#infoButton:hover {
+.img-container img {
+    width: inherit;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    animation: rotate 3s linear infinite;
+    animation-play-state: paused;
+
+}
+
+.music-container.play .img-container img {
+    animation-play-state: running;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to { 
+        transform: rotate(360deg);
+    } 
+}
+
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.action-btn {
+    background-color: #006F9D;
+    border: 0;
+    color: #dfdbdf;
+    font-size: 20px;
     cursor: pointer;
-    background: #053056;
-} */
+    padding: 10px;
+    margin: 0 20px;
+}
+
+.action-btn-big {
+    color: #cdc2d0;
+    font-size: 30px;
+}
+
+.action-btn:focus {
+    outline: 0;
+}
+
+.music-info {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: calc(100% - 40px);
+    opacity: 0;
+    transform: translateY(0%);
+    padding: 10px 10px 10px 150px;
+    transition: transform 0.3s ease-in opacity 0.3s ease-in;
+}
+
+.music-container.play .music-info {
+    opacity: 1;
+    transform: translateY(-100%);
+}
+
+.music-info h4 {
+    margin: 0;
+}
+
+
+.progress-container {
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    height: 4px;
+    width: 100%;
+}
+
+.progress {
+    background-color: #fe8daa;
+    border-radius: 5px;
+    height: 100%;
+    width: 50%;
+    transition: width 0.1s linear;
+
+}
+
+
+
 
 /* TILE CONTAINER AND TILES */
 
