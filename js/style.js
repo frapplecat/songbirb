@@ -189,25 +189,29 @@ const messageDisplay = document.querySelector('.message-container');
 //     {word: 'GOLDCREST', sound: 'assets/audio/corncrake-crex-crex.mp3'},
 // ];
 
-// let birds = [
-//     'GOLDCREST',
-//     'FIRECREST',
-//     'BRAMBLING',
-//     'FIELDFARE',
-//     'BLACKBIRD',
-//     'GOLDFINCH',
-//     'CORNCRAKE',
-//     'BULLFINCH',
-//     'CHAFFINCH'
-// ];
+let birds = [
+    'GOLDCREST',
+    'FIRECREST',
+    'BRAMBLING',
+    'FIELDFARE',
+    'BLACKBIRD',
+    'GOLDFINCH',
+    'CORNCRAKE',
+    'BULLFINCH',
+    'CHAFFINCH'
+];
 
-// const songBirb = birds[Math.floor(Math.random() * birds.length)];
+const songBirb = birds[Math.floor(Math.random() * birds.length)];
 
 
 const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'ENT', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '«'];
 
 // WIRED KEYBOARD LINK TO VIRTUAL KEYBOARD
 
+document.addEventListener("keypress", (event) => {
+    const element = document.getElementById(`${event.key.toUpperCase()}`);
+    element.click()
+  });
 
 
 //  GUESS ROWS 
