@@ -68,34 +68,6 @@ function closeModal(modal) {
     overlay.classList.remove('active');
 }
 
-
-
-
-
-const tileDisplay = document.querySelector('.tile-container');
-const keyboard = document.querySelector('.key-container');
-const messageDisplay = document.querySelector('.message-container');
-
-// let birds = [
-//     {word: 'GOLDCREST', sound: 'assets/audio/corncrake-crex-crex.mp3'},
-// ];
-
-let birds = [
-    'GOLDCREST',
-    'FIRECREST',
-    'BRAMBLING',
-    'FIELDFARE',
-    'BLACKBIRD',
-    'GOLDFINCH',
-    'CORNCRAKE',
-    'BULLFINCH',
-    'CHAFFINCH'
-];
-
-const songBirb = birds[Math.floor(Math.random() * birds.length)];
-
-const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'ENT', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '«'];
-
 // AUDIO BUTTONS
 
 const musicContainer = document.querySelector('.music-container');
@@ -110,19 +82,30 @@ const cover = document.querySelector('#cover');
 
 // BIRD SONGS
 
-const songs = ['corncrake', 'blackbird', 'goldfinch'];
+const songs = ['corncrake', 'blackbird', 'goldfinch','blackbird', 'brambling', 'bullfinch','corncrake', 'fieldfare', 'firecrest', 'goldcrest'];
 
 // KEEP TRACK OF SONGS
-let songIndex = 2;
+// let songIndex = [0];
+
+function random_song(songs)
+{
+  
+return songs[Math.floor(Math.random()*songs.length)];
+     
+}
+
+let songIndex = random_song(songs);
+
 
 // INITIALLY LOAD SONG INTO DOM
-loadSong(songs[songIndex]);
+// loadSong(songs[songIndex]);
+loadSong(random_song(songs));
 
 // UPDATE SONG DETAILS
 function loadSong(song) {
     title.innerText = song
     audio.src = `assets/audio/${song}.mp3`;
-    cover.src = `assets/images/${song}.jpg`
+    cover.src = `assets/images/audioquestionmarks.svg`
 }
 
 function playSong() {
@@ -146,7 +129,7 @@ function prevSong () {
     if(songIndex < 0) {
         songIndex = songs.length -1
     }
-    loadSong(songs[songIndex])
+    loadSong(random_song(songs))
     playSong()
 }
 
@@ -156,7 +139,7 @@ function nextSong () {
     if(songIndex > songs.length -1) {
         songIndex = 0
     }
-    loadSong(songs[songIndex])
+    loadSong(random_song(songs))
     playSong()
 }
 
@@ -196,9 +179,34 @@ progressContainer.addEventListener('click', setProgress)
 
 // audio.addEventListener('ended', nextSong);
 
+// SONGBIRB 
+
+const tileDisplay = document.querySelector('.tile-container');
+const keyboard = document.querySelector('.key-container');
+const messageDisplay = document.querySelector('.message-container');
+
+// let birds = [
+//     {word: 'GOLDCREST', sound: 'assets/audio/corncrake-crex-crex.mp3'},
+// ];
+
+// let birds = [
+//     'GOLDCREST',
+//     'FIRECREST',
+//     'BRAMBLING',
+//     'FIELDFARE',
+//     'BLACKBIRD',
+//     'GOLDFINCH',
+//     'CORNCRAKE',
+//     'BULLFINCH',
+//     'CHAFFINCH'
+// ];
+
+// const songBirb = birds[Math.floor(Math.random() * birds.length)];
 
 
-// WIRED KEYBOARD
+const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'ENT', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '«'];
+
+// WIRED KEYBOARD LINK TO VIRTUAL KEYBOARD
 
 
 

@@ -189,18 +189,6 @@ body {
 
 /* AUDIO BUTTON */
 
-/* body {
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(0deg, rgb(247, 247, 247) 23.8%, rgb(252, 221, 221) 92%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-} */
-
 .music-container {
     background-color: #006F9D;
     border-radius: 15px;
@@ -219,12 +207,11 @@ body {
 
 .img-container::after{
     content: '';
-    background-color: #fff;
-    height: 20px;
-    width: 20px;
+    border: solid 2px rgba(10, 45, 60, 0.6);
+    height: 110px;
+    width: 110px;
     position: absolute;
     left: 50%;
-    bottom: 50%;
     border-radius: 50%;
     transform: translate(-50%, -50%);
 
@@ -286,7 +273,7 @@ body {
 }
 
 .music-info {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(10, 45, 60, 0.6);
     border-radius: 15px 15px 0 0;
     position: absolute;
     top: 0;
@@ -305,11 +292,12 @@ body {
 
 .music-info h4 {
     margin: 0;
+    opacity: 0;
 }
 
 
 .progress-container {
-    background: #fff;
+    background: rgba(10, 45, 60, 0.6);;
     border-radius: 5px;
     cursor: pointer;
     margin: 10px;
@@ -318,7 +306,7 @@ body {
 }
 
 .progress {
-    background-color: #fe8daa;
+    background-color: #538d4e;
     border-radius: 5px;
     height: 100%;
     width: 50%;
