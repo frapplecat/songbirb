@@ -204,7 +204,7 @@ body {
     position: relative;
 }
 
-.img-container::after{
+.img-container::after {
     content: '';
     height: 110px;
     width: 110px;
@@ -238,9 +238,10 @@ body {
     from {
         transform: rotate(0deg);
     }
-    to { 
+
+    to {
         transform: rotate(360deg);
-    } 
+    }
 }
 
 
@@ -295,7 +296,8 @@ body {
 
 
 .progress-container {
-    background: rgba(10, 45, 60, 0.6);;
+    background: rgba(10, 45, 60, 0.6);
+    ;
     border-radius: 5px;
     cursor: pointer;
     margin: 10px;
@@ -377,8 +379,9 @@ body {
 /* MESSAGE CONTAINER */
 
 .message-container {
-    height: 150px;
+    height: 350px;
     background-color: var(--right);
+    opacity: 0.8;
 }
 
 .message-container p {
@@ -386,7 +389,16 @@ body {
     border-radius: 10px;
     padding: 10px;
     margin: 0;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+
+
+
 
 /* KEYBOARD CONTAINER */
 
