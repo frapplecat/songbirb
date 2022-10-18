@@ -306,13 +306,13 @@ const checkRow = () => {
     if (currentTile > 4) {
         flipTile();
         if (songBirb == guess) {
-            showMessage('Magnificent!');
+            showMessage('Well done!');
             isGameOver = true;
             return;
         } else {
             if (currentRow >= 5) {
                 isGameOver = false;
-                showMessage('Unlucky, the answer was:. Want to try again?');
+                showMessage('Unlucky, the answer was:');
                 return;
             }
             if (currentRow < 5) {
@@ -329,7 +329,7 @@ const showMessage = (message) => {
     const messageElement = document.createElement("p");
     const refreshButton = document.createElement("button");
     messageElement.textContent = message;
-    refreshButton.innerHTML = "Click here!";
+    refreshButton.innerHTML = "Want to try again?";
     messageDisplay.append(messageElement);
     messageElement.append(refreshButton);
 
