@@ -84,6 +84,12 @@ const cover = document.querySelector('#cover');
 
 const songs = ['goldcrest', 'firecrest', 'brambling', 'fieldfare', 'blackbird', 'goldfinch', 'corncrake', 'bullfinch', 'chaffinch'];
 
+// let myArray = [
+//     {bird: 'GOLDCREST', song: 'goldcrest'},
+//     {bird: 'BLACKBIRD', song: 'blackbird'},
+//     {bird: 'CORNCRAKE', song: 'corncrake'},
+
+// ];
 
 // KEEP TRACK OF SONGS
 // let songIndex = [0];
@@ -91,7 +97,6 @@ const songs = ['goldcrest', 'firecrest', 'brambling', 'fieldfare', 'blackbird', 
 function random_song(songs) {
 
     return songs[Math.floor(Math.random() * songs.length)];
-
 }
 
 let songIndex = random_song(songs);
@@ -99,14 +104,17 @@ let songIndex = random_song(songs);
 
 // INITIALLY LOAD SONG INTO DOM
 // loadSong(songs[songIndex]);
+
 loadSong(random_song(songs));
 
 // UPDATE SONG DETAILS
 function loadSong(song) {
     title.innerText = song
     audio.src = `assets/audio/${song}.mp3`;
-    cover.src = `assets/images/audioquestionmarks.svg`
+    // cover.src = `assets/images/audioquestionmarks.svg`
 }
+
+
 
 function playSong() {
     musicContainer.classList.add('play')
@@ -188,9 +196,13 @@ const tileDisplay = document.querySelector('.tile-container');
 const keyboard = document.querySelector('.key-container');
 const messageDisplay = document.querySelector('.message-container');
 
-// let birds = [
-//     {word: 'GOLDCREST', sound: 'assets/audio/corncrake-crex-crex.mp3'},
-// ];
+
+// function onLoadSong(song) {
+//     answer = document.getElementsByTagName('h4').innerText
+//     console.log('answer');
+// }
+
+// const songBirb = 'answer';
 
 let birds = [
     'GOLDCREST',
@@ -211,10 +223,11 @@ const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', '
 
 // WIRED KEYBOARD LINK TO VIRTUAL KEYBOARD
 
-document.addEventListener('keypress', (event) => {
+document.addEventListener('keydown', (event) => {
     const element = document.getElementById(`${event.key.toUpperCase()}`);
     element.click()
 });
+
 
 //  GUESS ROWS 
 
