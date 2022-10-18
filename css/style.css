@@ -433,3 +433,31 @@ body {
 }
 
 /* MEDIA QUERIES */
+
+@media only screen and (max-width: 600px) {
+
+    .music-container {
+        margin: 0 0 30px;
+    }
+    
+    .key-container {
+        width: 395px;
+        margin-top: 20px;
+    }
+
+    .tile-container {
+        width: 395px;
+    }
+
+    .tile-container .tile {
+        width: 35px;
+        height: 35px;
+    }
+
+    .key-container button {
+    width: 35px;
+    height: 35px;
+    margin: 4px 1px;
+    }
+
+}
