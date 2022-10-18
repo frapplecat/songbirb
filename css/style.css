@@ -126,16 +126,17 @@ body {
 
 .modalbody,
 .modaltitle {
-    color: black;
+    color: var(--keyboard);
     padding: 10px 15px;
 }
+
 
 .modalheader {
     padding: 10px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--keyboard);
 }
 
 .modalheader .modaltitle {
@@ -150,7 +151,7 @@ body {
     background: none;
     font-size: 1.25rem;
     font-weight: bold;
-    color: black;
+    color: var(--keyboard);
 }
 
 #modaloverlay {
