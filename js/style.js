@@ -219,7 +219,7 @@ let birds = [
 const songBirb = birds[Math.floor(Math.random() * birds.length)];
 
 
-const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'ENT', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '«'];
+const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', '↵', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '⌦'];
 
 // WIRED KEYBOARD LINK TO VIRTUAL KEYBOARD
 
@@ -266,11 +266,11 @@ keys.forEach(key => {
 
 const handleClick = (letter) => {
     console.log('clicked', letter);
-    if (letter === '«') {
+    if (letter === '⌦') {
         deleteLetter();
         return;
     }
-    if (letter === 'ENT') {
+    if (letter === '↵') {
         checkRow();
         return;
     }
@@ -303,7 +303,7 @@ const deleteLetter = () => {
 const checkRow = () => {
     const guess = guessRows[currentRow].join('');
 
-    if (currentTile > 4) {
+    if (currentTile > 8) {
         flipTile();
         if (songBirb == guess) {
             showMessage('Well done!');
