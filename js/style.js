@@ -326,17 +326,17 @@ const checkRow = () => {
 
 // RESET GAME
 const showMessage = (message) => {
-    const messageElement = document.createElement("p");
-    const refreshButton = document.createElement("button");
+    const messageElement = document.createElement('p');
+    const refreshButton = document.createElement('button');
     messageElement.textContent = message;
-    refreshButton.innerHTML = "Want to try again?";
+    refreshButton.innerHTML = 'Want to try again?';
     messageDisplay.append(messageElement);
     messageElement.append(refreshButton);
 
     function reloadPage() {
         window.location.reload();
     }
-    refreshButton.addEventListener("click", reloadPage);
+    refreshButton.addEventListener('click', reloadPage);
 };
 
 // const showMessage = (message) => {

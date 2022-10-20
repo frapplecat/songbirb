@@ -435,6 +435,7 @@ body {
     border: none;
     background-color: var(--keyboard);
     margin: 4px;
+    box-shadow: 0 7px 7px 0 rgba(10, 45, 60, 0.3);
 }
 
 /* MEDIA QUERIES */
@@ -463,6 +464,8 @@ body {
     width: 35px;
     height: 35px;
     margin: 4px 1px;
+    box-shadow: 0 5px 5px 0 rgba(10, 45, 60, 0.3);
+
     }
 
 }
