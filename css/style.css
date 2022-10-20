@@ -6,6 +6,23 @@
     box-sizing: border-box;
 }
 
+/* HTML/BODY */
+
+html,
+body {
+    background: var(--default);
+}
+
+/*  ROOT COLOURS */
+
+:root {
+    --default: #006F9D;
+    --empty: #518196;
+    --wrong: #FAB900;
+    --right: #538d4e;
+    --keyboard: #004866;
+}
+
 /*  SPLASH INTRO */
 
 .intro {
@@ -64,22 +81,7 @@
     transition: ease-in-out 0.5s;
 }
 
-/* HTML/BODY */
 
-html,
-body {
-    background: var(--default);
-}
-
-/*  ROOT COLOURS */
-
-:root {
-    --default: #006F9D;
-    --empty: #518196;
-    --wrong: #FAB900;
-    --right: #538d4e;
-    --keyboard: #004866;
-}
 
 /*  GAME CONTAINER */
 
@@ -444,12 +446,12 @@ body {
     }
     
     .key-container {
-        width: 395px;
+        width: 375px;
         margin-top: 20px;
     }
 
     .tile-container {
-        width: 395px;
+        width: 375px;
     }
 
     .tile-container .tile {
@@ -461,6 +463,23 @@ body {
     width: 35px;
     height: 35px;
     margin: 4px 1px;
+    }
+
+}
+
+@media only screen and (max-width: 360px) {
+  
+    .key-container {
+        width: 360px;
+        margin-top: 20px;
+    }
+
+    .tile-container {
+        width: 360px;
+    }
+    .key-container button {
+    width: 33px;
+    height: 33px;
     }
 
 }
