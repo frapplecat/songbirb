@@ -84,10 +84,10 @@ const cover = document.querySelector('#cover');
 
 const songs = ['goldcrest', 'firecrest', 'brambling', 'fieldfare', 'blackbird', 'goldfinch', 'corncrake', 'bullfinch', 'chaffinch'];
 
-// let myArray = [
-//     {bird: 'GOLDCREST', song: 'goldcrest'},
-//     {bird: 'BLACKBIRD', song: 'blackbird'},
-//     {bird: 'CORNCRAKE', song: 'corncrake'},
+// let birdArray = [
+//     {birdname: 'GOLDCREST', birdsong: 'goldcrest'},
+//     {birdname: 'BLACKBIRD', birdsong: 'blackbird'},
+//     {birdname: 'CORNCRAKE', birdsong: 'corncrake'},
 
 // ];
 
@@ -102,9 +102,10 @@ function random_song(songs) {
 let songIndex = random_song(songs);
 
 
-// INITIALLY LOAD SONG INTO DOM
-// loadSong(songs[songIndex]);
 
+// INITIALLY LOAD SONG INTO DOM
+
+// loadSong(songs[songIndex]);
 loadSong(random_song(songs));
 
 // UPDATE SONG DETAILS
@@ -197,12 +198,11 @@ const keyboard = document.querySelector('.key-container');
 const messageDisplay = document.querySelector('.message-container');
 
 
-// function onLoadSong(song) {
-//     answer = document.getElementsByTagName('h4').innerText
-//     console.log('answer');
+// function songTitle() {
+//     return document.getElementById('title').textContent.toUpperCase
 // }
 
-// const songBirb = 'answer';
+// const songBirb = document.getElementById('title').textContent.toUpperCase;
 
 let birds = [
     'GOLDCREST',
@@ -397,3 +397,12 @@ const flipTile = () => {
         }, 750 * index)
     })
 }
+
+
+
+// let h4 = document.getElementById('title');
+// h4.addEventListener("play", songBirbAnswer);
+
+// function songBirbAnswer() {
+//   document.getElementById("title").textContent.toUpperCase;
+// }
