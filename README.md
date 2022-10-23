@@ -173,13 +173,16 @@ birds to guess by location.
 <br>
 <br>
 
-
 # LANGUAGES USED
 
 * HTML
 * CSS
 * JAVASCRIPT
 * MARKDOWN
+
+<br>
+<br>
+<br>
 
 # FRAMEWORKS, LIBRARIES & PROGRAMS USED
 
@@ -202,6 +205,10 @@ birds to guess by location.
 * FREECONVERT.COM - to compress mp4
 * EZGIF.COM - to convert compressed mp4 to gif for README
 * RECORD IT PRO - for screen-capturing video and converting mp4 to gif
+
+<br>
+<br>
+<br>
 
 # MANUAL TESTING
 * I manually tested each link in different browsers and at different sizes.
@@ -235,6 +242,15 @@ I'd missed in my Portfolio 1 project but was highlighted in my assessment report
 * **TESTING** - launched website using terminal, initially just tested the desktop view. 
 * **RESULT** - once the info modal was selected some of the buttons for the audio naviagtion appeared over the info screen 
 * **FIX** - I added a Z-index to correct the problem.
+
+## WHEN GAMEOVER, COULD STILL DELETE LETTERS
+
+* **EXPECTED** - on completion of the game, win or lose, the game is over and has to to be refreshed to play again
+* **TESTING** - launched website using terminal, initially just tested the desktop view. 
+* **RESULT** - noticed that on completion of the game, after the win/lose/try again message pops up you could still access the tiles and delete letters.
+* **FIX** - in the javascript I had a line 'isGameOver = false;', changed to 'isGameOver = true;' to fix the error.
+
+
 
 <br>
 <br>

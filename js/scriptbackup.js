@@ -27,11 +27,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }, 2300);
 })
 
-// const skipIntro = localStorage.getItem('skipIntro')
-//     if (!skipIntro) {
-//         localStorage.setItem('skipIntro', 'true');
-//     }
-
 // MODAL OVERLAY
 
 const openModalButtons = document.querySelectorAll('[data-modal-target]');
@@ -84,62 +79,36 @@ const progress = document.querySelector('.progress');
 const progressContainer = document.querySelector('.progress-container');
 const title = document.querySelector('#title');
 const cover = document.querySelector('#cover');
+const btn = document.getElementById('play', 'prev', 'next');
 
 
 // BIRD SONGS
 
-// const songs = ['goldcrest', 'firecrest', 'brambling', 'fieldfare', 'blackbird', 'goldfinch', 'corncrake', 'bullfinch', 'chaffinch'];
+const songs = ['goldcrest', 'firecrest', 'brambling', 'fieldfare', 'blackbird', 'goldfinch', 'corncrake', 'bullfinch', 'chaffinch'];
 
-let birdArray = [{
-        birdname: 'GOLDCREST',
-        birdsong: 'goldcrest'
-    },
-    {
-        birdname: 'BLACKBIRD',
-        birdsong: 'blackbird'
-    },
-    {
-        birdname: 'CORNCRAKE',
-        birdsong: 'corncrake'
-    },
-    {
-        birdname: 'FIRECREST',
-        birdsong: 'firecrest'
-    },
-    {
-        birdname: 'BRAMBLING',
-        birdsong: 'brambling'
-    },
-    {
-        birdname: 'FIELDFARE',
-        birdsong: 'fieldfare'
-    },
-    {
-        birdname: 'GOLDFINCH',
-        birdsong: 'goldfinch'
-    },
-    {
-        birdname: 'BULLFINCH',
-        birdsong: 'bullfinch'
-    },
-    {
-        birdname: 'CHAFFINCH',
-        birdsong: 'chaffinch'
-    }
-];
+// let birdArray = [
+//     {birdname: 'GOLDCREST', birdsong: 'goldcrest'},
+//     {birdname: 'BLACKBIRD', birdsong: 'blackbird'},
+//     {birdname: 'CORNCRAKE', birdsong: 'corncrake'},
+
+// ];
 
 // KEEP TRACK OF SONGS
+// let songIndex = [0];
 
-function random_song(birdArray) {
+function random_song(songs) {
 
-    return birdArray[Math.floor(Math.random() * birdArray.length)].birdsong;
+    return songs[Math.floor(Math.random() * songs.length)];
 }
 
-let songIndex = random_song(birdArray);
+let songIndex = random_song(songs);
+
+
 
 // INITIALLY LOAD SONG INTO DOM
 
-loadSong(random_song(birdArray));
+// loadSong(songs[songIndex]);
+loadSong(random_song(songs));
 
 // UPDATE SONG DETAILS
 function loadSong(song) {
@@ -169,19 +138,19 @@ function pauseSong() {
 function prevSong() {
     songIndex--
     if (songIndex < 0) {
-        songIndex = birdArray.length - 1
+        songIndex = songs.length - 1
     }
-    loadSong(random_song(birdArray))
+    loadSong(random_song(songs))
     playSong()
 }
 
 function nextSong() {
     songIndex++
 
-    if (songIndex > birdArray.length - 1) {
+    if (songIndex > songs.length - 1) {
         songIndex = 0
     }
-    loadSong(random_song(birdArray))
+    loadSong(random_song(songs))
     playSong()
 }
 
@@ -215,6 +184,11 @@ playBtn.addEventListener('click', () => {
 })
 
 
+btn.addEventListener('click', () => {
+    const isPlaying = musicContainer.classList.contains('play', 'prev', 'next');
+    const birdsong = document.getElementById('title').textContent.toUpperCase;
+    console.log(birdsong);
+})
 
 // CHANGE SONG EVENTS
 prevBtn.addEventListener('click', prevSong)
@@ -259,16 +233,8 @@ const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', '
 // WIRED KEYBOARD LINK TO VIRTUAL KEYBOARD
 
 document.addEventListener('keydown', (event) => {
-
-    if (event.key === 'backspace') {
-        const element = document.getElementById(`${event.key.toUpperCase()}`);
-        element.click()
-    } else if (event.key === 'enter') {
-        const element = document.getElementById(`${event.key.toUpperCase()}`);
-    } else {
-        const element = document.getElementById(`${event.key.toUpperCase()}`);
-        element.click()
-    }
+    const element = document.getElementById(`${event.key.toUpperCase()}`);
+    element.click()
 });
 
 
@@ -308,19 +274,16 @@ keys.forEach(key => {
 });
 
 const handleClick = (letter) => {
-    if (!isGameOver) {
-        console.log('clicked', letter);
-        if (letter === '⌦') {
-            deleteLetter();
-            return;
-        }
-        if (letter === '↵') {
-            checkRow();
-            return;
-        }
-        addLetter(letter)
-        console.log('guessRows', guessRows);
+    console.log('clicked', letter);
+    if (letter === '⌦') {
+        deleteLetter();
+        return;
     }
+    if (letter === '↵') {
+        checkRow();
+        return;
+    }
+    addLetter(letter);
 };
 
 const addLetter = (letter) => {
@@ -357,7 +320,7 @@ const checkRow = () => {
             return;
         } else {
             if (currentRow >= 5) {
-                isGameOver = true;
+                isGameOver = false;
                 showMessage('Unlucky, the answer was:');
                 return;
             }

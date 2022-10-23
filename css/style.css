@@ -298,6 +298,7 @@ body {
 .music-info h4 {
     margin: 0;
     opacity: 0;
+    position: absolute;
 }
 
 
@@ -318,8 +319,6 @@ body {
     transition: width 0.1s linear;
 
 }
-
-
 
 
 /* TILE CONTAINER AND TILES */
