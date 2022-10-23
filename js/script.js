@@ -358,7 +358,7 @@ const checkRow = () => {
         } else {
             if (currentRow >= 5) {
                 isGameOver = true;
-                showMessage('Unlucky, the answer was:');
+                showMessage(`'Unlucky, the answer was: ${songBirb}'`);
                 return;
             }
             if (currentRow < 5) {
