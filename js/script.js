@@ -1,4 +1,6 @@
-// SPLASH INTRO
+/**
+ * Intro
+ */
 let intro = document.querySelector('.intro');
 let logo = document.querySelector('.logo-header');
 let logoSpan = document.querySelectorAll('.logo');
@@ -21,18 +23,26 @@ window.addEventListener('DOMContentLoaded', () => {
         })
     }, 2000);
 
-    // INTRO SPLASH ANIMATION
+/**
+ * Intro animation
+ */
     setTimeout(() => {
         intro.style.top = "-200vh"
     }, 2300);
 })
+
+/**
+ * Code to stop intro reloading on game refresh
+ */
 
 // const skipIntro = localStorage.getItem('skipIntro')
 //     if (!skipIntro) {
 //         localStorage.setItem('skipIntro', 'true');
 //     }
 
-// MODAL OVERLAY
+/**
+ * Modal info overlay
+ */
 
 const openModalButtons = document.querySelectorAll('[data-modal-target]');
 const closeModalButtons = document.querySelectorAll('[data-modal-close]');
@@ -73,7 +83,9 @@ function closeModal(modal) {
     overlay.classList.remove('active');
 }
 
-// AUDIO BUTTONS
+/**
+ * Birdsong audio player
+ */
 
 const musicContainer = document.querySelector('.music-container');
 const playBtn = document.querySelector('#play');
@@ -85,8 +97,6 @@ const progressContainer = document.querySelector('.progress-container');
 const title = document.querySelector('#title');
 const cover = document.querySelector('#cover');
 
-
-// BIRD SONGS
 
 // const songs = ['goldcrest', 'firecrest', 'brambling', 'fieldfare', 'blackbird', 'goldfinch', 'corncrake', 'bullfinch', 'chaffinch'];
 
@@ -128,27 +138,31 @@ let birdArray = [{
     }
 ];
 
-// KEEP TRACK OF SONGS
+/**
+ * Code to select a random bird from array
+ */
 
-function random_song(birdArray) {
-
-    return birdArray[Math.floor(Math.random() * birdArray.length)].birdsong;
+function getRandomBird() {
+    return birdArray[Math.floor(Math.random() * birdArray.length)];
 }
 
-let songIndex = random_song(birdArray);
+const currentBird = getRandomBird();
+let songIndex = currentBird.birdsong;
 
-// INITIALLY LOAD SONG INTO DOM
+/**
+ * Code to select the birdsong from the array
+ */
 
-loadSong(random_song(birdArray));
+loadSong(currentBird.birdsong);
 
-// UPDATE SONG DETAILS
+/**
+ * Code to update the song details
+ */
+
 function loadSong(song) {
     title.innerText = song
     audio.src = `assets/audio/${song}.mp3`;
-    // cover.src = `assets/images/audioquestionmarks.svg`
 }
-
-
 
 function playSong() {
     musicContainer.classList.add('play')
@@ -171,7 +185,7 @@ function prevSong() {
     if (songIndex < 0) {
         songIndex = birdArray.length - 1
     }
-    loadSong(random_song(birdArray))
+    loadSong(currentBird.birdsong)
     playSong()
 }
 
@@ -181,7 +195,7 @@ function nextSong() {
     if (songIndex > birdArray.length - 1) {
         songIndex = 0
     }
-    loadSong(random_song(birdArray))
+    loadSong(currentBird.birdsong)
     playSong()
 }
 
@@ -215,8 +229,10 @@ playBtn.addEventListener('click', () => {
 })
 
 
+/**
+ * Code to change song events
+ */
 
-// CHANGE SONG EVENTS
 prevBtn.addEventListener('click', prevSong)
 nextBtn.addEventListener('click', nextSong)
 
@@ -224,9 +240,10 @@ audio.addEventListener('timeupdate', updateProgress)
 
 progressContainer.addEventListener('click', setProgress)
 
-// audio.addEventListener('ended', nextSong);
 
-// SONGBIRB 
+/**
+ * SongBirb components
+ */
 
 const tileDisplay = document.querySelector('.tile-container');
 const keyboard = document.querySelector('.key-container');
@@ -239,40 +256,37 @@ const messageDisplay = document.querySelector('.message-container');
 
 // const songBirb = document.getElementById('title').textContent.toUpperCase;
 
-let birds = [
-    'GOLDCREST',
-    'FIRECREST',
-    'BRAMBLING',
-    'FIELDFARE',
-    'BLACKBIRD',
-    'GOLDFINCH',
-    'CORNCRAKE',
-    'BULLFINCH',
-    'CHAFFINCH'
-];
+// let birds = [
+//     'GOLDCREST',
+//     'FIRECREST',
+//     'BRAMBLING',
+//     'FIELDFARE',
+//     'BLACKBIRD',
+//     'GOLDFINCH',
+//     'CORNCRAKE',
+//     'BULLFINCH',
+//     'CHAFFINCH'
+// ];
 
-const songBirb = birds[Math.floor(Math.random() * birds.length)];
+// const songBirb = birds[Math.floor(Math.random() * birds.length)];
 
+let songBirb = currentBird.birdname;
 
 const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', '↵', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '⌦'];
 
-// WIRED KEYBOARD LINK TO VIRTUAL KEYBOARD
+/**
+ * Keyboard event listener to get key presses
+ */
 
 document.addEventListener('keydown', (event) => {
-
-    if (event.key === 'backspace') {
-        const element = document.getElementById(`${event.key.toUpperCase()}`);
-        element.click()
-    } else if (event.key === 'enter') {
-        const element = document.getElementById(`${event.key.toUpperCase()}`);
-    } else {
-        const element = document.getElementById(`${event.key.toUpperCase()}`);
-        element.click()
-    }
+    const element = document.getElementById(`${event.key.toUpperCase()}`);
+    element.click();
 });
 
 
-//  GUESS ROWS 
+/**
+ * create guess rows, tiles, keyboard
+ */
 
 const guessRows = [
     ['', '', '', '', '', '', '', '', ''],
@@ -344,7 +358,9 @@ const deleteLetter = () => {
     }
 }
 
-// CHECK IF ANSWER IS CORRECT
+/**
+ * Check if answer is correct
+ */
 
 const checkRow = () => {
     const guess = guessRows[currentRow].join('');
@@ -370,7 +386,10 @@ const checkRow = () => {
     }
 }
 
-// RESET GAME
+/**
+ *  Refresh game after finishing
+ */
+
 const showMessage = (message) => {
     const messageElement = document.createElement('p');
     const refreshButton = document.createElement('button');
@@ -392,14 +411,19 @@ const showMessage = (message) => {
 //     setTimeout(() => messageDisplay.removeChild(messageElement), 2000);
 // }
 
-// ADD COLOR TO KEYS
+
+/**
+ * Add color to keys
+ */
 
 const addColorToKey = (keyLetter, color) => {
     const key = document.getElementById(keyLetter);
     key.classList.add(color);
 }
 
-// TILE FLIP AND TILE COLOR CHANGE
+/**
+ * Tile flip and add color to tiles
+ */
 
 const flipTile = () => {
     const rowTiles = document.querySelector('#guessRow-' + currentRow).childNodes;
