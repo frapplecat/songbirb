@@ -255,6 +255,12 @@ const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', '
  */
 
 document.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+    document.getElementById('↵').click();
+    }
+    if (event.key === 'Backspace') {
+        document.getElementById('⌦').click();
+        }
     const element = document.getElementById(`${event.key.toUpperCase()}`);
     element.click();
 });
