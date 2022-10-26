@@ -394,6 +394,7 @@ body {
     text-align: center;
     background-color: var(--right);
     opacity: 0.8;
+    z-index: 1;
 }
 
 

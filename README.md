@@ -250,6 +250,12 @@ I'd missed in my Portfolio 1 project but was highlighted in my assessment report
 * **RESULT** - noticed that on completion of the game, after the win/lose/try again message pops up you could still access the tiles and delete letters.
 * **FIX** - in the javascript I had a line 'isGameOver = false;', changed to 'isGameOver = true;' to fix the error.
 
+## WORDTILES APEARING OVER GAME MESSAGE WHEN FLIPPING
+
+* **EXPECTED** - on completion of the game, win or lose, the game message would appear over the game board, slightly transparent so you can see the tiles underneath it.
+* **TESTING** - launched website using terminal, initially just tested the desktop view. 
+* **RESULT** - noticed that on completion of the game, after the win/lose/try again message pops up the game tile briefly appeared over the message box when flipping over.
+* **FIX** - I added a Z-index to the message container to keep it above the tiles.
 
 
 <br>

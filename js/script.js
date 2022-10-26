@@ -35,9 +35,9 @@ window.addEventListener('DOMContentLoaded', () => {
  * Code to stop intro reloading on game refresh
  */
 
-// const skipIntro = localStorage.getItem('skipIntro')
+// const skipIntro = localStorage.getItem('intro')
 //     if (!skipIntro) {
-//         localStorage.setItem('skipIntro', 'true');
+//         localStorage.setItem('intro', 'true');
 //     }
 
 /**
@@ -96,9 +96,6 @@ const progress = document.querySelector('.progress');
 const progressContainer = document.querySelector('.progress-container');
 const title = document.querySelector('#title');
 const cover = document.querySelector('#cover');
-
-
-// const songs = ['goldcrest', 'firecrest', 'brambling', 'fieldfare', 'blackbird', 'goldfinch', 'corncrake', 'bullfinch', 'chaffinch'];
 
 let birdArray = [{
         birdname: 'GOLDCREST',
@@ -249,27 +246,6 @@ const tileDisplay = document.querySelector('.tile-container');
 const keyboard = document.querySelector('.key-container');
 const messageDisplay = document.querySelector('.message-container');
 
-
-// function songTitle() {
-//     return document.getElementById('title').textContent.toUpperCase
-// }
-
-// const songBirb = document.getElementById('title').textContent.toUpperCase;
-
-// let birds = [
-//     'GOLDCREST',
-//     'FIRECREST',
-//     'BRAMBLING',
-//     'FIELDFARE',
-//     'BLACKBIRD',
-//     'GOLDFINCH',
-//     'CORNCRAKE',
-//     'BULLFINCH',
-//     'CHAFFINCH'
-// ];
-
-// const songBirb = birds[Math.floor(Math.random() * birds.length)];
-
 let songBirb = currentBird.birdname;
 
 const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', '↵', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '⌦'];
@@ -368,7 +344,7 @@ const checkRow = () => {
     if (currentTile > 8) {
         flipTile();
         if (songBirb == guess) {
-            showMessage('Well done!');
+            showMessage('Well done! Keep practicing');
             isGameOver = true;
             return;
         } else {
@@ -403,14 +379,6 @@ const showMessage = (message) => {
     }
     refreshButton.addEventListener('click', reloadPage);
 };
-
-// const showMessage = (message) => {
-//     const messageElement = document.createElement('p');
-//     messageElement.textContent = message;
-//     messageDisplay.append(messageElement);
-//     setTimeout(() => messageDisplay.removeChild(messageElement), 2000);
-// }
-
 
 /**
  * Add color to keys
@@ -467,12 +435,3 @@ const flipTile = () => {
         }, 750 * index)
     })
 }
-
-
-
-// let h4 = document.getElementById('title');
-// h4.addEventListener("play", songBirbAnswer);
-
-// function songBirbAnswer() {
-//   document.getElementById("title").textContent.toUpperCase;
-// }
