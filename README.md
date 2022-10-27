@@ -5,7 +5,7 @@
 <br>
 <br>
 
-# ABOUT SONGBIRB
+# **ABOUT SONGBIRB**
 
 The simple goal of songBird is to help people to learn the songs of various songbirds.
 With enough practice they should be guessing the songs on the first go of songBirb and
@@ -15,7 +15,7 @@ then be able to recognise the birdsong in the outdoors whether on a walk or in t
 <br>
 <br>
 
-# INITIAL WIREFRAMES
+# **INITIAL WIREFRAMES**
 ![Balsamiq mobile wireframe screenshots](readmeimages/songbirb-wireframe-mobiles.png)
 ![Balsamiq desktop wireframe screenshot1](readmeimages/songbirb-wireframe-desktop1.png)
 ![Balsamiq desktop wireframe screenshot1](readmeimages/songbirb-wireframe-desktop2.png)
@@ -24,7 +24,7 @@ then be able to recognise the birdsong in the outdoors whether on a walk or in t
 <br>
 <br>
 
-# UX (USER-EXPERIENCE)
+# **UX** (USER-EXPERIENCE)
 The target audience is both broad and narrow at the same time. 
 From 8 to 80, the only requirement is an interest in birds. 
 
@@ -36,7 +36,7 @@ Even experienced birdwatchers can struggle to recognise the individual calls and
 <br>
 <br>
 
-# USER STORIES
+# **USER STORIES**
 
 
 **Visitor Goals**
@@ -51,7 +51,7 @@ Even experienced birdwatchers can struggle to recognise the individual calls and
 <br>
 <br>
 
-# LOGO
+# **LOGO**
 
 ![songBirb Logo 1](readmeimages/songbirblogo1.png)
 
@@ -67,7 +67,17 @@ I felt it was eyecatching and suited the quirky title. I just adjusted the kerni
 <br>
 <br>
 
-# GAME OVERVIEW
+# **FAVICON**
+![favicon](readmeimages/screenbirb-favicon.png)
+
+I just selected the 's' from songBirb as the favicon.
+
+<br>
+<br>
+<br>
+
+
+# **GAME OVERVIEW**
 
 ![gameoverview](readmeimages/songbirb-game-container-screenshot.png)
 ![game overview gif](#.gif)
@@ -83,7 +93,7 @@ recognise each tune and eventually be able to guess the bird on the first go!
 <br>
 <br>
 
-# INTRO SPLASH SCREEN
+# **INTRO SPLASH SCREEN**
 
 ![introsplashscreen](#.gif)
 
@@ -96,7 +106,7 @@ I also wanted to use a brighter colour on the intro screen against the blue of t
 <br>
 <br>
 
-# RULES MODAL
+# **RULES MODAL**
 
 ![rulesmodal](readmeimages/songbirb-modal-screenshot.png)
 ![rulesmodal gif](#.gif)
@@ -107,7 +117,7 @@ I want the user to be able find out what the purpose of the site is easily and t
 <br>
 <br>
 
-# AUDIO CONTROL
+# **AUDIO CONTROL**
 
 ![audiocontrol](readmeimages/songbird-button-pause.screenshot.png)
 ![audiocontrol](readmeimages/songbird-button-play.screenshot.png)
@@ -118,7 +128,7 @@ Relistening is crucial to help memorise the song so I wanted that to be as easy 
 <br>
 <br>
 
-# THE GAME TILES
+# **THE GAME TILES**
 
 ![gametiles gif](#.gif)
 
@@ -129,7 +139,7 @@ At the moment it's currently arranged for a 9 letter birdname.
 <br>
 <br>
 
-# THE KEYBOARD
+# **THE KEYBOARD**
 
 ![thekeyboard gif](#.gif)
 
@@ -139,7 +149,7 @@ I tried a circle format for the keyboard as well but I felt it was too much with
 <br>
 <br>
 
-# WIN AND RELOAD
+# **WIN AND RELOAD**
 
 ![winreload gif](#.gif)
 
@@ -150,7 +160,7 @@ pop-up with the option to try again. I hope to set this up so the intro splash p
 <br>
 <br>
 
-# LOSE AND RELOAD
+# **LOSE AND RELOAD**
 
 ![losereload gif](#.gif)
 
@@ -161,7 +171,7 @@ pop-up with the option to try again. I hope to set this up so the intro splash p
 <br>
 <br>
 
-# FUTURE FEATURES
+# **FUTURE FEATURES**
 
 There are so many features that I'd like to add given more time and skill.
 * Expand the library to include many more birds, with names of different lengths.
@@ -175,7 +185,7 @@ birds to guess by location. Or to be able to orangise a personal array of birdso
 <br>
 <br>
 
-# LANGUAGES USED
+# **LANGUAGES USED**
 
 * HTML
 * CSS
@@ -186,7 +196,7 @@ birds to guess by location. Or to be able to orangise a personal array of birdso
 <br>
 <br>
 
-# FRAMEWORKS, LIBRARIES & PROGRAMS USED
+# **FRAMEWORKS, LIBRARIES & PROGRAMS USED**
 
 * **Balsamiq** - to create wireframe website mockups
 * **Gitpod** - to create the website and version control
@@ -212,7 +222,7 @@ birds to guess by location. Or to be able to orangise a personal array of birdso
 <br>
 <br>
 
-# MANUAL TESTING
+# **MANUAL TESTING**
 * I manually tested each link in different browsers and at different sizes.
 * I checked responsiveness using web dev tools in Chrome and Firefox. I manually resized each page to check flow and behaviour. I also viewed the site at various sizes: desktops to mobiles.
 * I also used https://responsivedesignchecker.com to check the website performance on a range of devices.
@@ -222,13 +232,36 @@ birds to guess by location. Or to be able to orangise a personal array of birdso
 <br>
 <br>
 
-# VALIDATION
+# **VALIDATION**
+**HTML Validator**
+![html validation](#.png)
 
 <br>
 <br>
 <br>
 
-# BUGS
+**CSS Jigsaw**
+![css validation](#.png)
+<br>
+<br>
+<br>
+
+**JShint**
+![jshint validation](#.png)
+<br>
+<br>
+<br>
+
+**Lighthouse**
+![lighthouse1](#.png)
+![lighthouse2](#.png)
+![lighthouse3](#.png)
+![lighthouse4](#.png)
+<br>
+<br>
+<br>
+
+# **BUGS**
 
 ## **Horizontal scroll issue**
 
@@ -269,7 +302,7 @@ birds to guess by location. Or to be able to orangise a personal array of birdso
 <br>
 <br>
 
-# KNOWN ISSUES
+# **KNOWN ISSUES**
 
 * 
 * 
@@ -278,7 +311,7 @@ birds to guess by location. Or to be able to orangise a personal array of birdso
 <br>
 <br>
 
-# DEPLOYMENT
+# **DEPLOYMENT**
 
 ![deployment gif](#.gif)
 
@@ -298,7 +331,7 @@ birds to guess by location. Or to be able to orangise a personal array of birdso
 <br>
 <br>
 
-# HOW TO FORK
+# **HOW TO FORK**
 
 ![how to fork gif](#.gif)
 
@@ -311,11 +344,11 @@ birds to guess by location. Or to be able to orangise a personal array of birdso
 <br>
 <br>
 
-# VERSION CONTROL
+# **VERSION CONTROL**
 
 I used GITPOD for version control software. Regular git add ., git commit -m, and git push were used to add, save and push the code to the GITHUB Reop where the source code is stored. I adjusted my git commit messages formatting midway through the project to reflect the feedback from my Portfolio 1 Assessment report.
 
-# CREDITS
+# **CREDITS**
 
 * The overall concept is based on the Wordle game
 * Intro splash page tutorial by Conor Bailey was very instructive: 
@@ -332,7 +365,7 @@ https://www.youtube.com/watch?v=QTHRWGn_sJw
 <br>
 <br>
 
-# MUSIC
+# **MUSIC**
 
 ![xeno canto](readmeimages/xeno-canto-screenhot.png)
 
@@ -343,7 +376,7 @@ Sharing wildlife sounds from around the world. A wonderful website.
 <br>
 <br>
 
-# ACKNOWLEDGEMENTS
+# **ACKNOWLEDGEMENTS**
 
 * Thanks to the Code Institute Tutors, Sean & Kevin. They helped me with many issues, from arrays to local storage.
 * Thanks as well to my Code Institute Mentor, Mitko Backvarov, for his support and encouragement.

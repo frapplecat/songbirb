@@ -10,17 +10,17 @@
 
 html,
 body {
-    background: var(--default);
+    background: var(--songbirbblue);
 }
 
 /*  ROOT COLOURS */
 
 :root {
-    --default: #006F9D;
-    --empty: #518196;
-    --wrong: #FAB900;
-    --right: #538d4e;
-    --keyboard: #004866;
+    --songbirbblue: #006F9D;
+    --songbirbgrey: #518196;
+    --songbirbyellow: #FAB900;
+    --songbirbgreen: #538d4e;
+    --songbirbdarkblue: #004866;
 }
 
 /*  SPLASH INTRO */
@@ -32,7 +32,7 @@ body {
     top: 0;
     width: 100%;
     height: 150vh;
-    background-color: #FAB900;
+    background-color: var(--songbirbyellow);
     transition: 1s;
 }
 
@@ -121,7 +121,7 @@ body {
     border: 1px solid black;
     border-radius: 10px;
     z-index: 10;
-    background-color: var(--wrong);
+    background-color: var(--songbirbyellow);
     width: 500px;
     height: 600px;
     max-width: 80%;
@@ -133,7 +133,7 @@ body {
 
 .modalbody,
 .modaltitle {
-    color: var(--keyboard);
+    color: var(--songbirbdarkblue);
     padding: 10px 15px;
 }
 
@@ -143,7 +143,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid var(--keyboard);
+    border-bottom: 1px solid var(--songbirbdarkblue);
 }
 
 .modalheader .modaltitle {
@@ -158,7 +158,7 @@ body {
     background: none;
     font-size: 1.25rem;
     font-weight: bold;
-    color: var(--keyboard);
+    color: var(--songbirbdarkblue);
 }
 
 #modaloverlay {
@@ -198,7 +198,7 @@ body {
 /* AUDIO BUTTON */
 
 .music-container {
-    background-color: #006F9D;
+    background-color: var(--songbirbblue);
     border-radius: 15px;
     box-shadow: 0 20px 20px 0 rgba(10, 45, 60, 0.6);
     display: flex;
@@ -314,7 +314,7 @@ body {
 }
 
 .progress {
-    background-color: #538d4e;
+    background-color: var(--songbirbgreen);
     border-radius: 5px;
     height: 100%;
     width: 50%;
@@ -336,7 +336,7 @@ body {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    border: 2px solid var(--empty);
+    border: 2px solid var(--songbirbgrey);
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -345,7 +345,7 @@ body {
 }
 
 /* .tile:hover {
-    border: 2px solid var(--wrong);
+    border: 2px solid var(--songbirbyellow);
 } */
 
 .tile-container div {
@@ -355,15 +355,15 @@ body {
 /* TILE OVERLAYS */
 
 .grey-overlay {
-    background-color: var(--empty) !important;
+    background-color: var(--songbirbgrey) !important;
 }
 
 .yellow-overlay {
-    background-color: var(--wrong) !important;
+    background-color: var(--songbirbyellow) !important;
 }
 
 .green-overlay {
-    background-color: var(--right) !important;
+    background-color: var(--songbirbgreen) !important;
 }
 
 /* TILE FLIP ANIMATION */
@@ -392,14 +392,14 @@ body {
     height: 25px;
     font-size: 2rem;
     text-align: center;
-    background-color: var(--right);
+    background-color: var(--songbirbgreen);
     opacity: 0.8;
     z-index: 1;
 }
 
 
 .message-container p {
-    background-color: var(--right);
+    background-color: var(--songbirbgreen);
     border-radius: 10px;
     padding: 10px;
     margin: 0;
@@ -416,7 +416,7 @@ body {
     height: 40px;
     border-radius: 10px;
     border: none;
-    background-color: var(--keyboard);
+    background-color: var(--songbirbdarkblue);
     margin: 4px;
 }
 
@@ -435,13 +435,13 @@ body {
     height: 50px;
     border-radius: 10px;
     border: none;
-    background-color: var(--keyboard);
+    background-color: var(--songbirbdarkblue);
     margin: 4px;
     box-shadow: 0 7px 7px 0 rgba(10, 45, 60, 0.3);
 }
 
 .key-container button:hover {
-    background-color: var(--wrong);
+    background-color: var(--songbirbyellow);
     
 }
 
