@@ -403,7 +403,8 @@ body {
     border-radius: 10px;
     padding: 10px;
     margin: 0;
-    height: 150px;
+    height: 125px;
+    width: 250px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -411,17 +412,13 @@ body {
 }
 
 .message-container button {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+    width: 160px;
+    height: 40px;
+    border-radius: 10px;
     border: none;
     background-color: var(--keyboard);
     margin: 4px;
 }
-
-
-
-
 
 /* KEYBOARD CONTAINER */
 
