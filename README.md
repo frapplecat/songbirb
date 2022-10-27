@@ -39,7 +39,7 @@ Even experienced birdwatchers can struggle to recognise the individual calls and
 # USER STORIES
 
 
-## VISITOR GOALS
+**Visitor Goals**
 
 * I want to be able to discern the purpose of the site quickly
 * I want to be able to find out how to play the game if necessary
@@ -177,8 +177,8 @@ birds to guess by location.
 
 * HTML
 * CSS
-* JAVASCRIPT
-* MARKDOWN
+* Javascript
+* Markdown
 
 <br>
 <br>
@@ -186,25 +186,25 @@ birds to guess by location.
 
 # FRAMEWORKS, LIBRARIES & PROGRAMS USED
 
-* BALSAMIQ - to create wireframe website mockups
-* GITPOD - to create the website and version control
-* GITHUB - to save and store the files for the website
-* ADOBE ILLUSTRATOR - to create the logo and various headings
-* ADOBE INDESIGN - ran the readme text through InDesign's spellchecker
-* AM I RESPONSIVE - to display the website on a range of devices
-* RESPONSIVEDESIGNCHECKER.COM - to check the display of the website on a range of devices
-* FONT AWESOME - for icons
-* FAVICON.IO -  to create a favicon
-* XENO_CANTO>ORG - for birdsong audio
-* GOOGLE DEV TOOLS - for troubleshooting and testing fixes
-* W3C HTML & CSS VALIDATORS - to test HTML and CSS code
-* JSHINT - to test javascript
-* SLACK, STACKOVERFLOW, YOUTUBE, GOOGLE, W3C Schools - for help with troubleshooting errors
-* COOLORS.CO - to check colour contrast
-* W3C SPELL CHECKER - to check website spelling
-* FREECONVERT.COM - to compress mp4
-* EZGIF.COM - to convert compressed mp4 to gif for README
-* RECORD IT PRO - for screen-capturing video and converting mp4 to gif
+* **Balsamiq** - to create wireframe website mockups
+* **Gitpod** - to create the website and version control
+* **Github** - to save and store the files for the website
+* **Adobe Illustrator** - to create the logo and various headings
+* **Adobe InDesign** - ran the readme text through InDesign's spellchecker
+* **Am I Responsive** - to display the website on a range of devices
+* **Responsivedesignchecker.com**- to check the display of the website on a range of devices
+* **Font Awesome** - for icons
+* **Favicon.io** -  to create a favicon
+* **Xeno-canto.org** - for birdsong audio
+* **Google Dev Tools** - for troubleshooting and testing fixes
+* **W3C HTML & CSS Validators** - to test HTML and CSS code
+* **JShint** - to test javascript
+* **Slack, Stackoverflow, Youtube, Google, W3C Schools** - for help with troubleshooting errors
+* **Coolors.co** - to check colour contrast
+* **W3C Spell Checker** - to check website spelling
+* **Freeconvert.com** - to compress mp4
+* **Ezgif.com**- to convert compressed mp4 to gif for README
+* **Record It Pro** - for screen-capturing video and converting mp4 to gif
 
 <br>
 <br>
@@ -256,6 +256,13 @@ I'd missed in my Portfolio 1 project but was highlighted in my assessment report
 * **TESTING** - launched website using terminal, initially just tested the desktop view. 
 * **RESULT** - noticed that on completion of the game, after the win/lose/try again message pops up the game tile briefly appeared over the message box when flipping over.
 * **FIX** - I added a Z-index to the message container to keep it above the tiles.
+
+## BACKSPACE AND ENTER NOT LINKED TO WIRED KEYBOARD
+
+* **EXPECTED** - the game's on screen keyboard to be accessible by mouse click or, to be more user friendly, to also link to the keypresses on a wired keyboard 
+* **TESTING** - launched website using terminal, initially just tested the desktop view. 
+* **RESULT** - noticed that the keydown event listener I'd added worked for A-Z letters but not Delete or Enter
+* **FIX** - I add if statements and targeted those 2 keys separately
 
 
 <br>
