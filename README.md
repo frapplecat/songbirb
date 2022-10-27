@@ -230,39 +230,39 @@ birds to guess by location.
 
 ## HORIZONTAL SCROLL AT MOBILE SCREEN SIZES
 
-* **EXPECTED** - the game to work well on mobile, tablet and desktop
-* **TESTING** - launched website using terminal, used web dev tools to test the game at various sizes. 
-* **RESULT** - I noticed a of small amount horizontal scroll at mobile-screen sizes (a problem that
+* **Expected** - the game to work well on mobile, tablet and desktop
+* **Testing** - launched website using terminal, used web dev tools to test the game at various sizes. 
+* **Result** - I noticed a of small amount horizontal scroll at mobile-screen sizes (a problem that
 I'd missed in my Portfolio 1 project but was highlighted in my assessment report)
-* **FIX** - I adjusted my CSS media queries to correct it.
+* **Fix** - I adjusted my CSS media queries to correct it.
 
 ## AUDIO NAVIGATION BUTTONS AND MODAL OVERLAY ISSUE
 
-* **EXPECTED** - when the info modal was activated it would overlay the game container and all its elements
-* **TESTING** - launched website using terminal, initially just tested the desktop view. 
-* **RESULT** - once the info modal was selected some of the buttons for the audio naviagtion appeared over the info screen 
-* **FIX** - I added a Z-index to correct the problem.
+* **Expected** - when the info modal was activated it would overlay the game container and all its elements
+* **Testing** - launched website using terminal, initially just tested the desktop view. 
+* **Result** - once the info modal was selected some of the buttons for the audio naviagtion appeared over the info screen 
+* **Fix** - I added a Z-index to correct the problem.
 
 ## WHEN GAMEOVER, COULD STILL DELETE LETTERS
 
-* **EXPECTED** - on completion of the game, win or lose, the game is over and has to to be refreshed to play again
-* **TESTING** - launched website using terminal, initially just tested the desktop view. 
-* **RESULT** - noticed that on completion of the game, after the win/lose/try again message pops up you could still access the tiles and delete letters.
-* **FIX** - in the javascript I had a line 'isGameOver = false;', changed to 'isGameOver = true;' to fix the error.
+* **Expected** - on completion of the game, win or lose, the game is over and has to to be refreshed to play again
+* **Testing** - launched website using terminal, initially just tested the desktop view. 
+* **Result** - noticed that on completion of the game, after the win/lose/try again message pops up you could still access the tiles and delete letters.
+* **Fix** - in the javascript I had a line 'isGameOver = false;', changed to 'isGameOver = true;' to Fix the error.
 
 ## WORDTILES APEARING OVER GAME MESSAGE WHEN FLIPPING
 
-* **EXPECTED** - on completion of the game, win or lose, the game message would appear over the game board, slightly transparent so you can see the tiles underneath it.
-* **TESTING** - launched website using terminal, initially just tested the desktop view. 
-* **RESULT** - noticed that on completion of the game, after the win/lose/try again message pops up the game tile briefly appeared over the message box when flipping over.
-* **FIX** - I added a Z-index to the message container to keep it above the tiles.
+* **Expected** - on completion of the game, win or lose, the game message would appear over the game board, slightly transparent so you can see the tiles underneath it.
+* **Testing** - launched website using terminal, initially just tested the desktop view. 
+* **Result** - noticed that on completion of the game, after the win/lose/try again message pops up the game tile briefly appeared over the message box when flipping over.
+* **Fix** - I added a Z-index to the message container to keep it above the tiles.
 
 ## BACKSPACE AND ENTER NOT LINKED TO WIRED KEYBOARD
 
-* **EXPECTED** - the game's on screen keyboard to be accessible by mouse click or, to be more user friendly, to also link to the keypresses on a wired keyboard 
-* **TESTING** - launched website using terminal, initially just tested the desktop view. 
-* **RESULT** - noticed that the keydown event listener I'd added worked for A-Z letters but not Delete or Enter
-* **FIX** - I add if statements and targeted those 2 keys separately
+* **Expected** - the game's on screen keyboard to be accessible by mouse click or, to be more user friendly, to also link to the keypresses on a wired keyboard 
+* **Testing** - launched website using terminal, initially just tested the desktop view. 
+* **Result** - noticed that the keydown event listener I'd added worked for A-Z letters but not Delete or Enter
+* **Fix** - I add if statements and targeted those 2 keys separately
 
 
 <br>
