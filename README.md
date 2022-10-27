@@ -120,7 +120,7 @@ the particular birdsong will play for, to relisten to the current song the user 
 
 ![gametiles](#)
 
-I've changed the game tiles to a circle format to differantiate for Wordle.
+I've changed the game tiles to a circle format to differantiate the layout from Wordle.
 At the moment it's currently arranged for a 9 letter birdname.
 
 <br>
@@ -163,7 +163,7 @@ pop-up with the option to try again. I hope to set this up so the intro splash p
 
 There are so many features that I'd like to add given more time and skill.
 * Expand the library to include many more birds, with names of different lengths.
-From Wren to Nightingale.
+From wren to nightingale.
 * Add code so the tiles would change to suit the length of birdname.
 * Add options so the user could adapt the game to their needs e.g be able to select 
 birds to guess by location.
@@ -228,41 +228,40 @@ birds to guess by location.
 
 # BUGS
 
-## HORIZONTAL SCROLL AT MOBILE SCREEN SIZES
+## **Horizontal scroll issue**
 
-* **Expected** - the game to work well on mobile, tablet and desktop
+* **Expected** - the game to work well on mobile, tablet and desktop.
 * **Testing** - launched website using terminal, used web dev tools to test the game at various sizes. 
-* **Result** - I noticed a of small amount horizontal scroll at mobile-screen sizes (a problem that
-I'd missed in my Portfolio 1 project but was highlighted in my assessment report)
+* **Result** - I noticed a of small amount horizontal scroll at mobile-screen sizes.
 * **Fix** - I adjusted my CSS media queries to correct it.
 
-## AUDIO NAVIGATION BUTTONS AND MODAL OVERLAY ISSUE
+## **Audio navigation buttons and modal overlay issue**
 
-* **Expected** - when the info modal was activated it would overlay the game container and all its elements
+* **Expected** - when the info modal was activated it would overlay the game container and all its elements.
 * **Testing** - launched website using terminal, initially just tested the desktop view. 
-* **Result** - once the info modal was selected some of the buttons for the audio naviagtion appeared over the info screen 
+* **Result** - once the info modal was selected some of the buttons for the audio naviagtion appeared over the info screen .
 * **Fix** - I added a Z-index to correct the problem.
 
-## WHEN GAMEOVER, COULD STILL DELETE LETTERS
+## **When gameover, could still delete letters**
 
-* **Expected** - on completion of the game, win or lose, the game is over and has to to be refreshed to play again
+* **Expected** - on completion of the game, win or lose, the game is over and has to to be refreshed to play again.
 * **Testing** - launched website using terminal, initially just tested the desktop view. 
 * **Result** - noticed that on completion of the game, after the win/lose/try again message pops up you could still access the tiles and delete letters.
 * **Fix** - in the javascript I had a line 'isGameOver = false;', changed to 'isGameOver = true;' to Fix the error.
 
-## WORDTILES APEARING OVER GAME MESSAGE WHEN FLIPPING
+## **Word tiles appearing over game message when flipping**
 
 * **Expected** - on completion of the game, win or lose, the game message would appear over the game board, slightly transparent so you can see the tiles underneath it.
 * **Testing** - launched website using terminal, initially just tested the desktop view. 
 * **Result** - noticed that on completion of the game, after the win/lose/try again message pops up the game tile briefly appeared over the message box when flipping over.
 * **Fix** - I added a Z-index to the message container to keep it above the tiles.
 
-## BACKSPACE AND ENTER NOT LINKED TO WIRED KEYBOARD
+## **Backspace and Enter not linked to wired-keyboard keys**
 
-* **Expected** - the game's on screen keyboard to be accessible by mouse click or, to be more user friendly, to also link to the keypresses on a wired keyboard 
+* **Expected** - the game's on screen keyboard to be accessible by mouse click or, to be more user friendly, to also link to the keypresses on a wired-keyboard. 
 * **Testing** - launched website using terminal, initially just tested the desktop view. 
-* **Result** - noticed that the keydown event listener I'd added worked for A-Z letters but not Delete or Enter
-* **Fix** - I add if statements and targeted those 2 keys separately
+* **Result** - noticed that the keydown event listener I'd added worked for A-Z letters but not Delete or Enter.
+* **Fix** - I added if statements and targeted those 2 keys separately.
 
 
 <br>
