@@ -3,6 +3,7 @@
 /**
  * Intro
  */
+
  let intro = document.querySelector('.intro');
  let logoSpan = document.querySelectorAll('.logo');
  
