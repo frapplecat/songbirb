@@ -40,6 +40,7 @@
      if (!skipIntro) {
          localStorage.setItem('intro', 'true');
      }
+
  
  /**
   * Modal info overlay
@@ -255,14 +256,15 @@
   */
  
  document.addEventListener('keydown', (event) => {
-     if (event.key === 'Enter') {
+    if (event.key === 'Enter') {
      document.getElementById('↵').click();
      }
-     if (event.key === 'Backspace') {
+    else if (event.key === 'Backspace') {
          document.getElementById('⌦').click();
          }
-     const element = document.getElementById(`${event.key.toUpperCase()}`);
-     element.click();
+    else {
+        document.getElementById(`${event.key.toUpperCase()}`).click();
+    }
  });
  
  
