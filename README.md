@@ -334,3 +334,6 @@ Sharing wildlife sounds from around the world. A wonderful website.
 <br>
 
 # ACKNOWLEDGEMENTS
+
+* Thanks to the Code Institute Tutors, Sean & Kevin. They helped me with many issues, from arrays to local storage.
+* Thanks as well to my Code Institute Mentor, Mitko Backvarov, for his support and encouragement.

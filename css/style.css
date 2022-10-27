@@ -297,7 +297,7 @@ body {
     transform: translateY(-100%);
 }
 
-.music-info h4 {
+.music-info h2 {
     margin: 0;
     opacity: 0;
     position: absolute;
