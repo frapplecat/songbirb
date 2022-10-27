@@ -69,7 +69,8 @@ I felt it was eyecatching and suited the quirky title. I just adjusted the kerni
 
 # GAME OVERVIEW
 
-![gameoverview](#)
+![gameoverview](readmeimages/songbirb-game-container-screenshot.png)
+![game overview gif](#.gif)
 
 
 The game in based on the famous Wordle. I've tried to change some of the key components so the overall look is different though, from the colour scheme to the key and tile shapes. 
@@ -84,7 +85,7 @@ recognise each tune and eventually be able to guess the bird on the first go!
 
 # INTRO SPLASH SCREEN
 
-![introsplashscreen](#)
+![introsplashscreen](#.gif)
 
 I've add a splash screen on initial load of the game. It contains the songBirb logo and the line:
 Time to learn some birdsong. This should give the user an instant idea of what the site is about.
@@ -97,7 +98,8 @@ I also wanted to use a brighter colour on the intro screen against the blue of t
 
 # RULES MODAL
 
-![rulesmodal](#)
+![rulesmodal](readmeimages/songbirb-modal-screenshot.png)
+![rulesmodal gif](#.gif)
 
 I want the user to be able find out what the purpose of the site is easily and to understand how to play the game. With this in mind I included a modal that fills the screen when the ? button is clicked. While the modal is active it overlay covers the rest of the screen and prevents the user from acessing the game until it's closed. The modal can be close using the x in the top right of the info panel or for ease of use just by clicking the overlay background itself. I include the rules modal button with the audio naviagtion to create a compact arrangement of all the game buttons that would also be more mobile screen size friendly.
 
@@ -107,18 +109,18 @@ I want the user to be able find out what the purpose of the site is easily and t
 
 # AUDIO CONTROL
 
-![audiocontrol](#)
+![audiocontrol](readmeimages/songbird-button-pause.screenshot.png)
+![audiocontrol](readmeimages/songbird-button-play.screenshot.png)
+![audiocontrol gif](#.gif)
 
-The audio navigation is simple set-up. The play button is largest as this will probably be the main button used. There is also a prev and next button in case the user wants to play multiple games and toggle through the birdsong array. Once playing a progress bar pops-up to give a guide to how long
-the particular birdsong will play for, to relisten to the current song the user just needs to press the play button again. 
-
-<br>
+The audio navigation is simple set-up. The play button is largest button and begins the game. There is also a prev and next button that I've repurposed so either of them can be pressed to relisten to the current song. 
+Relistening is crucial to help memorise the song so I wanted that to be as easy as possible with putting the song on a continuous loop. Once playing a progress bar pops-up to give a guide to how long the particular birdsong will play.
 <br>
 <br>
 
 # THE GAME TILES
 
-![gametiles](#)
+![gametiles gif](#.gif)
 
 I've changed the game tiles to a circle format to differantiate the layout from Wordle.
 At the moment it's currently arranged for a 9 letter birdname.
@@ -129,7 +131,7 @@ At the moment it's currently arranged for a 9 letter birdname.
 
 # THE KEYBOARD
 
-![thekeyboard](#)
+![thekeyboard gif](#.gif)
 
 I tried a circle format for the keyboard as well but I felt it was too much with the tiles and didn't balance on screen. So switched to a square format with a rounded corner that is also reflected in the audio nav component and modal.
 
@@ -139,7 +141,7 @@ I tried a circle format for the keyboard as well but I felt it was too much with
 
 # WIN AND RELOAD
 
-![winreload](#)
+![winreload gif](#.gif)
 
 I hope that the user will want to play multiple times so on WIN a congratulations message will
 pop-up with the option to try again. I hope to set this up so the intro splash page won't reload, just the game.
@@ -150,7 +152,7 @@ pop-up with the option to try again. I hope to set this up so the intro splash p
 
 # LOSE AND RELOAD
 
-![losereload](#)
+![losereload gif](#.gif)
 
 I hope that the user will want to play multiple times so on LOSE a commiserations message will
 pop-up with the option to try again. I hope to set this up so the intro splash page won't reload, just the game.
@@ -166,7 +168,7 @@ There are so many features that I'd like to add given more time and skill.
 From wren to nightingale.
 * Add code so the tiles would change to suit the length of birdname.
 * Add options so the user could adapt the game to their needs e.g be able to select 
-birds to guess by location.
+birds to guess by location. Or to be able to orangise a personal array of birdsongs to learn.
 * Add ability to track their progress, keep their statistics on record.
 
 <br>
@@ -214,7 +216,7 @@ birds to guess by location.
 * I manually tested each link in different browsers and at different sizes.
 * I checked responsiveness using web dev tools in Chrome and Firefox. I manually resized each page to check flow and behaviour. I also viewed the site at various sizes: desktops to mobiles.
 * I also used https://responsivedesignchecker.com to check the website performance on a range of devices.
-* I used the W3C SPELL CHECKER to check website spelling.
+* I used the W3C Spell Checker to check website spelling.
 
 <br>
 <br>
@@ -263,6 +265,14 @@ birds to guess by location.
 * **Result** - noticed that the keydown event listener I'd added worked for A-Z letters but not Delete or Enter.
 * **Fix** - I added if statements and targeted those 2 keys separately.
 
+<br>
+<br>
+<br>
+
+# KNOWN ISSUES
+
+* 
+* 
 
 <br>
 <br>
@@ -270,7 +280,7 @@ birds to guess by location.
 
 # DEPLOYMENT
 
-![deployment](#)
+![deployment gif](#.gif)
 
 * The site was deployed to GitHub pages<br>
 
@@ -290,7 +300,7 @@ birds to guess by location.
 
 # HOW TO FORK
 
-![how to fork](#)
+![how to fork gif](#.gif)
 
 * Login/signup to GitHub.
 * Locate the relevant repository, for example: 
