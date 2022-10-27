@@ -359,7 +359,7 @@
          } else {
              if (currentRow >= 5) {
                  isGameOver = true;
-                 showMessage(`'Unlucky, the answer was: ${songBirb}'`);
+                 showMessage(`Correct answer: ${songBirb}`);
                  return;
              }
              if (currentRow < 5) {
