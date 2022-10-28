@@ -232,31 +232,63 @@ birds to guess by location. Or to be able to orangise a personal array of birdso
 <br>
 <br>
 
+# **AM I RESPONSIVE**
+![am i responsive](#.png)
+
+<br>
+<br>
+<br>
+
+# **MOBILE RESPONSIVENESS**
+![mobile responsiveness](#.gif)
+
+<br>
+<br>
+<br>
+
 # **VALIDATION**
 **HTML Validator**
-![html validation](#.png)
+
+![html validation](readmeimages/html-validation.png)
 
 <br>
 <br>
 <br>
 
 **CSS Jigsaw**
-![css validation](#.png)
+
+![css validation](readmeimages/css-validation.png)
+
 <br>
 <br>
 <br>
 
 **JShint**
-![jshint validation](#.png)
+
+![jshint validation](readmeimages/jshint.png)
+
 <br>
 <br>
 <br>
 
 **Lighthouse**
-![lighthouse1](#.png)
-![lighthouse2](#.png)
-![lighthouse3](#.png)
-![lighthouse4](#.png)
+
+![lighthouse1](readmeimages/lighthouse.png)
+![lighthouse2](readmeimages/lighthouse-performance.png)
+![lighthouse3](readmeimages/lighthouse-access.png)
+![lighthouse4](readmeimages/lighthouse-bp.png)
+![lighthouse5](readmeimages/lighthouse-seo.png)
+
+<br>
+<br>
+<br>
+
+**Wave**
+
+![wave1](readmeimages/wave-evaluation1.png)
+![wave1](readmeimages/wave-evaluation2.png)
+
+
 <br>
 <br>
 <br>

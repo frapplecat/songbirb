@@ -13,7 +13,7 @@ body {
     background: var(--songbirbblue);
 }
 
-/*  ROOT COLOURS */
+/*  ROOT COLORS */
 
 :root {
     --songbirbblue: #006F9D;
@@ -202,7 +202,6 @@ body {
     border-radius: 15px;
     box-shadow: 0 20px 20px 0 rgba(10, 45, 60, 0.6);
     display: flex;
-    /* padding: 20px 30px; */
     position: relative;
     margin: 40px 0;
 }
@@ -344,10 +343,6 @@ body {
     margin: 2px;
 }
 
-/* .tile:hover {
-    border: 2px solid var(--songbirbyellow);
-} */
-
 .tile-container div {
     display: flex;
 }
@@ -442,7 +437,7 @@ body {
 
 .key-container button:hover {
     background-color: var(--songbirbyellow);
-    
+
 }
 
 
@@ -453,7 +448,7 @@ body {
     .music-container {
         margin: 0 0 30px;
     }
-    
+
     .key-container {
         width: 375px;
         margin-top: 20px;
@@ -469,10 +464,10 @@ body {
     }
 
     .key-container button {
-    width: 35px;
-    height: 35px;
-    margin: 4px 1px;
-    box-shadow: 0 5px 5px 0 rgba(10, 45, 60, 0.3);
+        width: 35px;
+        height: 35px;
+        margin: 4px 1px;
+        box-shadow: 0 5px 5px 0 rgba(10, 45, 60, 0.3);
 
     }
 
@@ -483,7 +478,7 @@ body {
 }
 
 @media only screen and (max-width: 360px) {
-  
+
     .key-container {
         width: 360px;
         margin-top: 20px;
@@ -492,9 +487,10 @@ body {
     .tile-container {
         width: 360px;
     }
+
     .key-container button {
-    width: 33px;
-    height: 33px;
+        width: 33px;
+        height: 33px;
     }
 
 }
