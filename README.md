@@ -24,7 +24,7 @@ then be able to recognise the birdsong in the outdoors whether on a walk or in t
 <br>
 <br>
 
-# **UX** (USER-EXPERIENCE)
+# **UX (USER-EXPERIENCE)**
 The target audience is both broad and narrow at the same time. 
 From 8 to 80, the only requirement is an interest in birds. 
 
@@ -80,8 +80,8 @@ I just selected the 's' from songBirb as the favicon.
 # **GAME OVERVIEW**
 
 ![gameoverview](readmeimages/songbirb-game-container-screenshot.png)
-![game overview gif](#.gif)
-
+![game overview1 gif](readmeimages/songbirb-overview1.gif)
+![game overview2 gif](readmeimages/songbirb-overview2.gif)
 
 The game in based on the famous Wordle. I've tried to change some of the key components so the overall look is different though, from the colour scheme to the key and tile shapes. 
 A big difference is the audio aspect and the fact it's to be used as a learning aid. 
@@ -95,12 +95,14 @@ recognise each tune and eventually be able to guess the bird on the first go!
 
 # **INTRO SPLASH SCREEN**
 
-![introsplashscreen](#.gif)
+![introsplashscreen](readmeimages/songbirb-splash-screen.gif)
+![introsplashscreen remove from local storage](readmeimages/songbirb-remove-key-from-local-storage.gif)
 
-I've add a splash screen on initial load of the game. It contains the songBirb logo and the line:
+I've added a splash screen on initial loading of the game. It contains the songBirb logo and the line:
 Time to learn some birdsong. This should give the user an instant idea of what the site is about.
 I set the intro page so it loads and disappears quickly so it doesn't delay the user too much.
-I also wanted to use a brighter colour on the intro screen against the blue of the main game to provide some extra contrast and separation between the two elements.
+I also wanted to use a brighter colour on the intro screen against the blue of the main game to provide some extra contrast and separation between the two elements. I've put the tagline in the songbirb green so it doesn't get lost on the white logo during the animation. After this initial load the intro gets put into local storage and won't load again so it doesn't annoy a user who is going to play multiple game in a row.
+If you want to get the intro to load again you just remove the key from local storage. I've included a gif above with the process.
 
 <br>
 <br>
@@ -109,7 +111,7 @@ I also wanted to use a brighter colour on the intro screen against the blue of t
 # **RULES MODAL**
 
 ![rulesmodal](readmeimages/songbirb-modal-screenshot.png)
-![rulesmodal gif](#.gif)
+![rulesmodal gif](readmeimages/songbirb-rules-modal.gif)
 
 I want the user to be able find out what the purpose of the site is easily and to understand how to play the game. With this in mind I included a modal that fills the screen when the ? button is clicked. While the modal is active it overlay covers the rest of the screen and prevents the user from acessing the game until it's closed. The modal can be close using the x in the top right of the info panel or for ease of use just by clicking the overlay background itself. I include the rules modal button with the audio naviagtion to create a compact arrangement of all the game buttons that would also be more mobile screen size friendly.
 
@@ -121,7 +123,7 @@ I want the user to be able find out what the purpose of the site is easily and t
 
 ![audiocontrol](readmeimages/songbird-button-pause.screenshot.png)
 ![audiocontrol](readmeimages/songbird-button-play.screenshot.png)
-![audiocontrol gif](#.gif)
+![audiocontrol gif](readmeimages/songbirb-audio-controls.gif)
 
 The audio navigation is simple set-up. The play button is largest button and begins the game. There is also a prev and next button that I've repurposed so either of them can be pressed to relisten to the current song. 
 Relistening is crucial to help memorise the song so I wanted that to be as easy as possible with putting the song on a continuous loop. Once playing a progress bar pops-up to give a guide to how long the particular birdsong will play.
@@ -130,7 +132,7 @@ Relistening is crucial to help memorise the song so I wanted that to be as easy 
 
 # **THE GAME TILES**
 
-![gametiles gif](#.gif)
+![gametiles gif](readmeimages/songbirb-tiles.gif)
 
 I've changed the game tiles to a circle format to differantiate the layout from Wordle.
 At the moment it's currently arranged for a 9 letter birdname.
@@ -141,9 +143,10 @@ At the moment it's currently arranged for a 9 letter birdname.
 
 # **THE KEYBOARD**
 
-![thekeyboard gif](#.gif)
+![thekeyboard gif](readmeimages/songbirb-keyboard.gif)
 
-I tried a circle format for the keyboard as well but I felt it was too much with the tiles and didn't balance on screen. So switched to a square format with a rounded corner that is also reflected in the audio nav component and modal.
+I tried a circle format for the keyboard as well but I felt it was too much with the tiles and didn't balance on screen. So switched to a square format with a rounded corner that is also reflected in the audio nav component and modal. Yellow hover when using a mouse. Also works by linking to a desktop keyboard.
+Key colours change to match the tiles.
 
 <br>
 <br>
@@ -151,10 +154,11 @@ I tried a circle format for the keyboard as well but I felt it was too much with
 
 # **WIN AND RELOAD**
 
-![winreload gif](#.gif)
+![winreload gif](readmeimages/songbirb-win-game.gif)
 
 I hope that the user will want to play multiple times so on WIN a congratulations message will
-pop-up with the option to try again. I hope to set this up so the intro splash page won't reload, just the game.
+pop-up with the option to try again. I have set it up so after the initial load the intro page 
+gets put into local storage and won't load again for game reload.
 
 <br>
 <br>
@@ -162,10 +166,11 @@ pop-up with the option to try again. I hope to set this up so the intro splash p
 
 # **LOSE AND RELOAD**
 
-![losereload gif](#.gif)
+![losereload gif](readmeimages/songbirb-lose-game.gif)
 
-I hope that the user will want to play multiple times so on LOSE a commiserations message will
-pop-up with the option to try again. I hope to set this up so the intro splash page won't reload, just the game.
+I hope that the user will want to play multiple times so on LOSE a message with the correct bird name will
+pop-up with the option to try again. I have set it up so after the initial load the intro page 
+gets put into local storage and won't load again for game reload.
 
 <br>
 <br>
@@ -240,7 +245,8 @@ birds to guess by location. Or to be able to orangise a personal array of birdso
 <br>
 
 # **MOBILE RESPONSIVENESS**
-![mobile responsiveness](#.gif)
+![mobile responsiveness1](readmeimages/songbirb-mobile-responsiveness1.gif)
+![mobile responsiveness2](readmeimages/songbirb-mobile-responsiveness2.gif)
 
 <br>
 <br>
@@ -304,7 +310,7 @@ birds to guess by location. Or to be able to orangise a personal array of birdso
 
 * **Expected** - when the info modal was activated it would overlay the game container and all its elements.
 * **Testing** - launched website using terminal, initially just tested the desktop view. 
-* **Result** - once the info modal was selected some of the buttons for the audio naviagtion appeared over the info screen .
+* **Result** - once the info modal was selected some of the buttons for the audio naviagtion appeared over the info screen.
 * **Fix** - I added a Z-index to correct the problem.
 
 ---
@@ -335,6 +341,8 @@ birds to guess by location. Or to be able to orangise a personal array of birdso
 # **KNOWN ISSUES**
 
 * There is an issue with the green and yellow overlay and the letter-index if a letter appears more that once in a word.
+* Somestimes on refresh after winning or losing a game the intro screen very briefly appears even though
+it's set to display: none. Only seems to happening intermittently.
 
 <br>
 <br>
