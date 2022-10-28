@@ -210,7 +210,7 @@ birds to guess by location. Or to be able to orangise a personal array of birdso
 * **Xeno-canto.org** - for birdsong audio
 * **Google Dev Tools** - for troubleshooting and testing fixes
 * **W3C HTML & CSS Validators** - to test HTML and CSS code
-* **JShint** - to test javascript
+* **JS Hint** - to test javascript
 * **Slack, Stackoverflow, Youtube, Google, W3C Schools** - for help with troubleshooting errors
 * **Coolors.co** - to check colour contrast
 * **W3C Spell Checker** - to check website spelling
@@ -263,9 +263,9 @@ birds to guess by location. Or to be able to orangise a personal array of birdso
 <br>
 <br>
 
-**JShint**
+**JS Hint**
 
-![jshint validation](readmeimages/jshint.png)
+![js hint validation](readmeimages/jshint.png)
 
 <br>
 <br>
@@ -407,5 +407,6 @@ Sharing wildlife sounds from around the world. A wonderful website.
 
 # **ACKNOWLEDGEMENTS**
 
-* Thanks to the Code Institute Tutors, Sean & Kevin. They helped me with many issues, from arrays to local storage.
+* Thanks to the Code Institute Tutors, Sean & Kevin. They helped me with many issues, from arrays to keydowns
+* Huge thanks to another Code Institute Tutor, Ed, who solved an issue with my intro page and local storage.
 * Thanks as well to my Code Institute Mentor, Mitko Backvarov, for his support and encouragement.

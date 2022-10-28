@@ -12,12 +12,21 @@ window.addEventListener('DOMContentLoaded', () => {
 /**
  * Code to stop intro reloading on game refresh
  */
-    const skipIntro = localStorage.getItem('intro');
-    if (!skipIntro) {
-        localStorage.setItem('intro', 'true');
+    // skipIntro will either be null, true or false
+    let skipIntro = localStorage.getItem('intro');
+    // if it's null, create the entry and set to false
+    if (skipIntro == null) {
+        skipIntro = false;
+        localStorage.setItem('intro', 'false');
     }
 
-    if (skipIntro == 'true') {
+    // if (!skipIntro) {
+    //     localStorage.setItem('intro', 'true');
+    // }
+
+    // if skipIntro is false, we play the intro
+    if (skipIntro == false) {
+        console.log("skip intro false, playing intro...")
         setTimeout(() => {
             logoSpan.forEach((span) => {
                 span.classList.add('active');
@@ -37,6 +46,11 @@ window.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             intro.style.top = "-200vh";
         }, 2300);
+        // after the intro has played, we set it to true so it won't play again
+        localStorage.setItem('intro', 'true');
+    // if skipIntro is true, we set the display to none on the element
+    } else {
+        intro.style.display = 'none';
     }
 
 });
