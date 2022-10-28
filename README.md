@@ -233,7 +233,7 @@ birds to guess by location. Or to be able to orangise a personal array of birdso
 <br>
 
 # **AM I RESPONSIVE**
-![am i responsive](#.png)
+![am i responsive](readmeimages/songbirb-amiresponsive.png)
 
 <br>
 <br>
@@ -295,35 +295,33 @@ birds to guess by location. Or to be able to orangise a personal array of birdso
 
 # **BUGS**
 
-## **Horizontal scroll issue**
-
 * **Expected** - the game to work well on mobile, tablet and desktop.
 * **Testing** - launched website using terminal, used web dev tools to test the game at various sizes. 
 * **Result** - I noticed a of small amount horizontal scroll at mobile-screen sizes.
 * **Fix** - I adjusted my CSS media queries to correct it.
 
-## **Audio navigation buttons and modal overlay issue**
+---
 
 * **Expected** - when the info modal was activated it would overlay the game container and all its elements.
 * **Testing** - launched website using terminal, initially just tested the desktop view. 
 * **Result** - once the info modal was selected some of the buttons for the audio naviagtion appeared over the info screen .
 * **Fix** - I added a Z-index to correct the problem.
 
-## **When gameover, could still delete letters**
+---
 
 * **Expected** - on completion of the game, win or lose, the game is over and has to to be refreshed to play again.
 * **Testing** - launched website using terminal, initially just tested the desktop view. 
 * **Result** - noticed that on completion of the game, after the win/lose/try again message pops up you could still access the tiles and delete letters.
 * **Fix** - in the javascript I had a line 'isGameOver = false;', changed to 'isGameOver = true;' to Fix the error.
 
-## **Word tiles appearing over game message when flipping**
+---
 
 * **Expected** - on completion of the game, win or lose, the game message would appear over the game board, slightly transparent so you can see the tiles underneath it.
 * **Testing** - launched website using terminal, initially just tested the desktop view. 
 * **Result** - noticed that on completion of the game, after the win/lose/try again message pops up the game tile briefly appeared over the message box when flipping over.
 * **Fix** - I added a Z-index to the message container to keep it above the tiles.
 
-## **Backspace and Enter not linked to wired-keyboard keys**
+---
 
 * **Expected** - the game's on screen keyboard to be accessible by mouse click or, to be more user friendly, to also link to the keypresses on a wired-keyboard. 
 * **Testing** - launched website using terminal, initially just tested the desktop view. 
@@ -336,8 +334,7 @@ birds to guess by location. Or to be able to orangise a personal array of birdso
 
 # **KNOWN ISSUES**
 
-* 
-* 
+* There is an issue with the green and yellow overlay and the letter-index if a letter appears more that once in a word.
 
 <br>
 <br>
