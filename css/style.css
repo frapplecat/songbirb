@@ -484,3 +484,38 @@ body {
     }
 
 }
+
+@media only screen and (max-width: 320px) {
+
+    .key-container {
+        width: 320px;
+        margin-top: 15px;
+    }
+
+    .tile-container {
+        width: 320px;
+    }
+
+    .key-container button {
+        width: 28px;
+        height: 28px;
+    }
+
+    .tile-container .tile {
+        width: 30px;
+        height: 30px;
+    }
+
+    .modal {
+        height: 500px;
+    }
+
+    #modalinfobtn {
+        width: 55px;
+        height: 55px;
+    }
+
+    .music-container {
+        margin: 0 0 20px;
+}
+}
