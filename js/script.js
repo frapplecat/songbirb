@@ -20,11 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('intro', 'false');
     }
 
-    // if (!skipIntro) {
-    //     localStorage.setItem('intro', 'true');
-    // }
-
-    // if skipIntro is false, we play the intro
+    // if skipIntro is false, play the intro
     if (skipIntro == false) {
         console.log("skip intro false, playing intro...")
         setTimeout(() => {
@@ -46,13 +42,12 @@ window.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             intro.style.top = "-200vh";
         }, 2300);
-        // after the intro has played, we set it to true so it won't play again
+        // after the intro has played, set it to true so it won't play again
         localStorage.setItem('intro', 'true');
     // if skipIntro is true, we set the display to none on the element
     } else {
         intro.style.display = 'none';
     }
-
 });
 
 /**

@@ -119,7 +119,7 @@ I just selected the 's' from songBirb as the favicon.
 The game in based on the famous Wordle. I've tried to change some of the key components so the overall look is different though, from the colour scheme to the key and tile shapes. 
 A big difference is the audio aspect and the fact it's to be used as a learning aid. 
 To begin the user presses play on the audio navigation button and listens to the birdsong that is played. Then they can proceed to the birdname guess part of the game. Once a birdname is typed in and the enter button (↵) is clicked, it will trigger a flipping animation on the tiles and change the tile colour depending on whether a letter is present in the birdname, or not. If present in the birdname but in the wrong place, or present in the birdname and in the correct place, or not in the birdname at all. At the same time, the keyboard keys used also change to the relevant colour.
-With each guess the user will should relisten to the birdsong and over time will hopefully come to 
+With each guess the user will should re-listen to the birdsong and over time will hopefully come to 
 recognise each tune and eventually be able to guess the bird on the first go!
 
 <br>
@@ -134,7 +134,7 @@ recognise each tune and eventually be able to guess the bird on the first go!
 I've added a splash screen on initial loading of the game. It contains the songBirb logo and the line:
 Time to learn some birdsong. This should give the user an instant idea of what the site is about.
 I set the intro page so it loads and disappears quickly so it doesn't delay the user too much.
-I also wanted to use a brighter colour on the intro screen against the blue of the main game to provide some extra contrast and separation between the two elements. I've put the tagline in the songbirb green so it doesn't get lost on the white logo during the animation. After this initial load the intro gets put into local storage and won't load again so it doesn't annoy a user who is going to play multiple game in a row.
+I also wanted to use a brighter colour on the intro screen against the blue of the main game to provide some extra contrast and separation between the two elements. I've put the tag-line in the songbirb green so it doesn't get lost on the white logo during the animation. After this initial load the intro gets put into local storage and won't load again so it doesn't annoy a user who is going to play multiple game in a row.
 If you want to get the intro to load again you just remove the key from local storage. I've included a gif above with the process.
 
 <br>
@@ -146,7 +146,7 @@ If you want to get the intro to load again you just remove the key from local st
 ![rulesmodal](readmeimages/songbirb-modal-screenshot.png)
 ![rulesmodal gif](readmeimages/songbirb-rules-modal.gif)
 
-I want the user to be able find out what the purpose of the site is easily and to understand how to play the game. With this in mind I included a modal that fills the screen when the ? button is clicked. While the modal is active it overlay covers the rest of the screen and prevents the user from acessing the game until it's closed. The modal can be close using the x in the top right of the info panel or for ease of use just by clicking the overlay background itself. I include the rules modal button with the audio naviagtion to create a compact arrangement of all the game buttons that would also be more mobile screen size friendly.
+I want the user to be able find out what the purpose of the site is easily and to understand how to play the game. With this in mind I included a modal that fills the screen when the ? button is clicked. While the modal is active it overlay covers the rest of the screen and prevents the user from accessing the game until it's closed. The modal can be close using the x in the top right of the info panel or for ease of use just by clicking the overlay background itself. I include the rules modal button with the audio navigation to create a compact arrangement of all the game buttons that would also be more mobile screen size friendly.
 
 <br>
 <br>
@@ -158,8 +158,8 @@ I want the user to be able find out what the purpose of the site is easily and t
 ![audiocontrol](readmeimages/songbird-button-play.screenshot.png)
 ![audiocontrol gif](readmeimages/songbirb-audio-controls.gif)
 
-The audio navigation is simple set-up. The play button is largest button and begins the game. There is also a prev and next button that I've repurposed so either of them can be pressed to relisten to the current song. 
-Relistening is crucial to help memorise the song so I wanted that to be as easy as possible with putting the song on a continuous loop. Once playing a progress bar pops-up to give a guide to how long the particular birdsong will play.
+The audio navigation is simple set-up. The play button is largest button and begins the game. There is also a prev and next button that I've re-purposed so either of them can be pressed to re-listen to the current song. 
+Re-listening is crucial to help memorise the song so I wanted that to be as easy as possible with putting the song on a continuous loop. Once playing a progress bar pops-up to give a guide to how long the particular birdsong will play.
 <br>
 <br>
 
@@ -167,7 +167,7 @@ Relistening is crucial to help memorise the song so I wanted that to be as easy 
 
 ![gametiles gif](readmeimages/songbirb-tiles.gif)
 
-I've changed the game tiles to a circle format to differantiate the layout from Wordle.
+I've changed the game tiles to a circle format to differentiate the layout from Wordle.
 At the moment it's currently arranged for a 9 letter birdname.
 
 <br>
@@ -215,7 +215,7 @@ There are so many features that I'd like to add given more time and skill.
 * Expand the library to include many more birds, with names of different lengths.
 From wren to nightingale.
 * Add code so the tiles would change to suit the length of birdname.
-* Add options so the user could adapt the game to their needs e.g be able to select 
+* Add options so the user could adapt the game to their needs, e.g. be able to select 
 birds to guess by location. Or to be able to orangise a personal array of birdsongs to learn.
 * Add ability to track their progress, keep their statistics on record.
 
@@ -240,7 +240,7 @@ birds to guess by location. Or to be able to orangise a personal array of birdso
 * **Gitpod** - to create the website and version control
 * **Github** - to save and store the files for the website
 * **Adobe Illustrator** - to create the logo and various headings
-* **Adobe InDesign** - ran the readme text through InDesign's spellchecker
+* **Adobe InDesign** - ran the README text through InDesign's spell-checker
 * **Am I Responsive** - to display the website on a range of devices
 * **Responsivedesignchecker.com**- to check the display of the website on a range of devices
 * **Font Awesome** - for icons
@@ -255,7 +255,7 @@ birds to guess by location. Or to be able to orangise a personal array of birdso
 * **Freeconvert.com** - to compress mp4
 * **Ezgif.com**- to convert compressed mp4 to gif for README
 * **Record It Pro** - for screen-capturing video and converting mp4 to gif
-* **GitHub Wiki TOC generator** - for generating README Table og Contents
+* **GitHub Wiki TOC generator** - for generating README Table of Contents
 
 
 <br>
@@ -350,10 +350,10 @@ birds to guess by location. Or to be able to orangise a personal array of birdso
 
 ---
 
-* **Expected** - on completion of the game, win or lose, the game is over and has to to be refreshed to play again.
+* **Expected** - on completion of the game, win or lose, the game is over and has to be refreshed to play again.
 * **Testing** - launched website using terminal, initially just tested the desktop view. 
 * **Result** - noticed that on completion of the game, after the win/lose/try again message pops up you could still access the tiles and delete letters.
-* **Fix** - in the javascript I had a line 'isGameOver = false;', changed to 'isGameOver = true;' to Fix the error.
+* **Fix** - in the javascript I had a line 'isGameOver = false;', changed to 'isGameOver = true;' to fix the error.
 
 ---
 
@@ -376,8 +376,8 @@ birds to guess by location. Or to be able to orangise a personal array of birdso
 # **KNOWN ISSUES**
 
 * There is an issue with the green and yellow overlay and the letter-index if a letter appears more that once in a word.
-* Somestimes on refresh after winning or losing a game the intro screen very briefly appears even though
-it's set to display: none. Only seems to happening intermittently.
+* Sometimes on refresh after winning or losing a game the intro screen very briefly appears even though
+it is set to display: none. Only seems to happening intermittently.
 
 <br>
 <br>
@@ -385,7 +385,7 @@ it's set to display: none. Only seems to happening intermittently.
 
 # **DEPLOYMENT**
 
-![deployment gif](#.gif)
+![deployment gif](readmeimages/songbirbdeployment.gif)
 
 * The site was deployed to GitHub pages<br>
 
@@ -397,7 +397,7 @@ it's set to display: none. Only seems to happening intermittently.
 * Select main from the Branch dropdown menu
 * Make sure the /root folder is selected and press save
 * The site has now been deployed, it may take a few minutes before it is live
-* Here is the deployed link:
+* Here is the deployed link: https://frapplecat.github.io/songbirb/
 
 <br>
 <br>
@@ -405,11 +405,11 @@ it's set to display: none. Only seems to happening intermittently.
 
 # **HOW TO FORK**
 
-![how to fork gif](#.gif)
+![how to fork gif](readmeimages/howtofork.gif)
 
 * Login/signup to GitHub.
-* Locate the relevant repository, for example: 
-* Click on the 'Fork' button in the upper left.
+* Locate the relevant repository, for example: https://github.com/frapplecat/songbirb
+* Click on the 'Fork' button in the top right corner.
 * The forked version of this repo will be generated.
 
 <br>
