@@ -83,8 +83,6 @@ body {
     transition: ease-in-out 0.5s;
 }
 
-
-
 /*  GAME CONTAINER */
 
 .game-container {
@@ -137,7 +135,6 @@ body {
     padding: 10px 15px;
 }
 
-
 .modalheader {
     padding: 10px 15px;
     display: flex;
@@ -177,8 +174,6 @@ body {
     opacity: 1;
     pointer-events: all;
 }
-
-
 
 /* MODAL INFO BUTTON */
 
@@ -222,7 +217,6 @@ body {
 
 }
 
-
 .img-container img {
     width: inherit;
     height: 110px;
@@ -250,7 +244,6 @@ body {
         transform: rotate(360deg);
     }
 }
-
 
 .navigation {
     display: flex;
@@ -320,7 +313,6 @@ body {
     transition: width 0.1s linear;
 
 }
-
 
 /* TILE CONTAINER AND TILES */
 
@@ -392,7 +384,6 @@ body {
     z-index: 1;
 }
 
-
 .message-container p {
     background-color: var(--songbirbgreen);
     border-radius: 10px;
@@ -439,7 +430,6 @@ body {
     background-color: var(--songbirbyellow);
 
 }
-
 
 /* MEDIA QUERIES */
 

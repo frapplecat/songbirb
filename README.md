@@ -369,6 +369,13 @@ birds to guess by location. Or to be able to orangise a personal array of birdso
 * **Result** - noticed that the keydown event listener I'd added worked for A-Z letters but not Delete or Enter.
 * **Fix** - I added if statements and targeted those 2 keys separately.
 
+---
+
+* **Expected** - the intro page plays on first load, after playing a game and refreshing the page via the button the intro page won't play again. 
+* **Testing** - launched website using terminal, initially just tested the desktop view. 
+* **Result** - site started stalling on the intro screen.
+* **Fix** - I was using the wrong scope for the intro variable, changed from const to let to fix the problem.
+
 <br>
 <br>
 <br>
