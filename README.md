@@ -1,5 +1,38 @@
-
 ![songBirb heading](readmeimages/songbirbheading.png)
+
+<br>
+<br>
+<br>
+
+- [**ABOUT SONGBIRB**](#about-songbirb)
+- [**INITIAL WIREFRAMES**](#initial-wireframes)
+- [**UX (USER-EXPERIENCE)**](#ux-user-experience)
+- [**USER STORIES**](#user-stories)
+- [**LOGO**](#logo)
+- [**FAVICON**](#favicon)
+- [**GAME OVERVIEW**](#game-overview)
+- [**INTRO SPLASH SCREEN**](#intro-splash-screen)
+- [**RULES MODAL**](#rules-modal)
+- [**AUDIO CONTROL**](#audio-control)
+- [**THE GAME TILES**](#the-game-tiles)
+- [**THE KEYBOARD**](#the-keyboard)
+- [**WIN AND RELOAD**](#win-and-reload)
+- [**LOSE AND RELOAD**](#lose-and-reload)
+- [**FUTURE FEATURES**](#future-features)
+- [**LANGUAGES USED**](#languages-used)
+- [**RESOURCES**](#resources)
+- [**MANUAL TESTING**](#manual-testing)
+- [**AM I RESPONSIVE**](#am-i-responsive)
+- [**MOBILE RESPONSIVENESS**](#mobile-responsiveness)
+- [**VALIDATION**](#validation)
+- [**BUGS**](#bugs)
+- [**KNOWN ISSUES**](#known-issues)
+- [**DEPLOYMENT**](#deployment)
+- [**HOW TO FORK**](#how-to-fork)
+- [**VERSION CONTROL**](#version-control)
+- [**CREDITS**](#credits)
+- [**MUSIC**](#music)
+- [**ACKNOWLEDGEMENTS**](#acknowledgements)
 
 <br>
 <br>
@@ -201,7 +234,7 @@ birds to guess by location. Or to be able to orangise a personal array of birdso
 <br>
 <br>
 
-# **FRAMEWORKS, LIBRARIES & PROGRAMS USED**
+# **RESOURCES**
 
 * **Balsamiq** - to create wireframe website mockups
 * **Gitpod** - to create the website and version control
@@ -222,15 +255,17 @@ birds to guess by location. Or to be able to orangise a personal array of birdso
 * **Freeconvert.com** - to compress mp4
 * **Ezgif.com**- to convert compressed mp4 to gif for README
 * **Record It Pro** - for screen-capturing video and converting mp4 to gif
+* **GitHub Wiki TOC generator** - for generating README Table og Contents
+
 
 <br>
 <br>
 <br>
 
 # **MANUAL TESTING**
-* I manually tested each link in different browsers and at different sizes.
+* I manually tested each button in different browsers and at different sizes.
 * I checked responsiveness using web dev tools in Chrome and Firefox. I manually resized each page to check flow and behaviour. I also viewed the site at various sizes: desktops to mobiles.
-* I also used https://responsivedesignchecker.com to check the website performance on a range of devices.
+* I also used **[Responsive Design Checker](https://responsivedesignchecker.com)** to check the website performance on a range of devices.
 * I used the W3C Spell Checker to check website spelling.
 
 <br>
@@ -388,15 +423,10 @@ I used GITPOD for version control software. Regular git add ., git commit -m, an
 # **CREDITS**
 
 * The overall concept is based on the Wordle game
-* Intro splash page tutorial by Conor Bailey was very instructive: 
-https://www.youtube.com/watch?v=2ak37WrbSDg
-* I referenced many youtube tutorials on wordle clones but in particular Ania Kubów:
-https://www.youtube.com/watch?v=mpby4HiElek
-* Modal overlay tutorial by Web Dev Simplified was excellent:
-https://www.youtube.com/watch?v=MBaw_6cPmAw
-* A tutorial on audio by Traversy Media was very useful:
-https://www.youtube.com/watch?v=QTHRWGn_sJw
-
+* Intro splash page **[tutorial](https://www.youtube.com/watch?v=2ak37WrbSDg)** by Conor Bailey was very instructive. 
+* I referenced many youtube tutorials on wordle clones but in particular **[Ania Kubów](https://www.youtube.com/watch?v=mpby4HiElek)**.
+* Modal overlay **[tutorial](https://www.youtube.com/watch?v=MBaw_6cPmAw)** by Web Dev Simplified was excellent:
+* A **[tutorial](https://www.youtube.com/watch?v=QTHRWGn_sJw)** on audio by Traversy Media was very useful:
 
 <br>
 <br>
@@ -406,7 +436,7 @@ https://www.youtube.com/watch?v=QTHRWGn_sJw
 
 ![xeno canto](readmeimages/xeno-canto-screenhot.png)
 
-The birdsongs used were all selected from https://xeno-canto.org.
+The birdsongs used were all selected from **[Xeno-Canto](https://xeno-canto.org)**.
 Sharing wildlife sounds from around the world. A wonderful website.
 
 <br>
