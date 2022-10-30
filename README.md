@@ -461,11 +461,11 @@ I used GITPOD for version control software. Regular git add ., git commit -m, an
 
 # **CREDITS**
 
-* The overall concept is based on the Wordle game
+* The overall concept is based on the Wordle game.
 * Intro splash page **[tutorial](https://www.youtube.com/watch?v=2ak37WrbSDg)** by Conor Bailey was very instructive. 
 * I referenced many youtube tutorials on wordle clones but in particular **[Ania Kubów](https://www.youtube.com/watch?v=mpby4HiElek)**.
-* Modal overlay **[tutorial](https://www.youtube.com/watch?v=MBaw_6cPmAw)** by Web Dev Simplified was excellent:
-* A **[tutorial](https://www.youtube.com/watch?v=QTHRWGn_sJw)** on audio by Traversy Media was very useful:
+* Modal overlay **[tutorial](https://www.youtube.com/watch?v=MBaw_6cPmAw)** by Web Dev Simplified was excellent.
+* A **[tutorial](https://www.youtube.com/watch?v=QTHRWGn_sJw)** on audio by Traversy Media was very useful.
 
 <br>
 <br>
