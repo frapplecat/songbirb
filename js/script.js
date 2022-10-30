@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 
-/**
+/*
  * Intro
  */
 
@@ -9,9 +9,9 @@ let logoSpan = document.querySelectorAll('.logo');
 
 window.addEventListener('DOMContentLoaded', () => {
 
-/**
- * Code to stop intro reloading on game refresh
- */
+    /*
+     * Code to stop intro reloading on game refresh
+     */
     // skipIntro will either be null, true or false
     let skipIntro = localStorage.getItem('intro');
     // if it's null, create the entry and set to false
@@ -44,13 +44,13 @@ window.addEventListener('DOMContentLoaded', () => {
         }, 2300);
         // after the intro has played, set it to true so it won't play again
         localStorage.setItem('intro', 'true');
-    // if skipIntro is true, we set the display to none on the element
+        // if skipIntro is true, we set the display to none on the element
     } else {
         intro.style.display = 'none';
     }
 });
 
-/**
+/*
  * Modal info overlay
  */
 
@@ -93,7 +93,7 @@ function closeModal(modal) {
     overlay.classList.remove('active');
 }
 
-/**
+/*
  * Birdsong audio player
  */
 
@@ -144,7 +144,7 @@ let birdArray = [{
     }
 ];
 
-/**
+/*
  * Code to select a random bird from array
  */
 
@@ -155,13 +155,13 @@ function getRandomBird() {
 const currentBird = getRandomBird();
 let songIndex = currentBird.birdsong;
 
-/**
+/*
  * Code to select the birdsong from the array
  */
 
 loadSong(currentBird.birdsong);
 
-/**
+/*
  * Code to update the song details
  */
 
@@ -235,7 +235,7 @@ playBtn.addEventListener('click', () => {
 });
 
 
-/**
+/*
  * Code to change song events
  */
 
@@ -247,7 +247,7 @@ audio.addEventListener('timeupdate', updateProgress);
 progressContainer.addEventListener('click', setProgress);
 
 
-/**
+/*
  * SongBirb components
  */
 
@@ -259,7 +259,7 @@ let songBirb = currentBird.birdname;
 
 const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', '↵', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '⌦'];
 
-/**
+/*
  * Keyboard event listener to get key presses
  */
 
@@ -274,7 +274,7 @@ document.addEventListener('keydown', (event) => {
 });
 
 
-/**
+/*
  * create guess rows, tiles, keyboard
  */
 
@@ -348,7 +348,7 @@ const deleteLetter = () => {
     }
 };
 
-/**
+/*
  * Check if answer is correct
  */
 
@@ -376,7 +376,7 @@ const checkRow = () => {
     }
 };
 
-/**
+/*
  *  Refresh game after finishing
  */
 
@@ -394,7 +394,7 @@ const showMessage = (message) => {
     refreshButton.addEventListener('click', reloadPage);
 };
 
-/**
+/*
  * Add color to keys
  */
 
@@ -403,7 +403,7 @@ const addColorToKey = (keyLetter, color) => {
     key.classList.add(color);
 };
 
-/**
+/*
  * Tile flip and add color to tiles
  */
 
