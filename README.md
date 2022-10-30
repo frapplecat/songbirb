@@ -112,7 +112,7 @@ I felt it was eyecatching and suited the quirky title. I just adjusted the kerni
 # **FAVICON**
 ![favicon](readmeimages/screenbirb-favicon.png)
 
-I just selected the 's' from songBirb as the favicon.
+I selected the 's' from songBirb as the favicon.
 
 <br>
 <br>
@@ -273,7 +273,7 @@ birds to guess by location. Or to be able to orangise a personal array of birdso
 
 # **MANUAL TESTING**
 * I manually tested each button in different browsers and at different sizes.
-* I checked responsiveness using web dev tools in Chrome and Firefox. I manually resized each page to check flow and behaviour. I also viewed the site at various sizes: desktops to mobiles.
+* I checked responsiveness using web dev tools in Chrome and Firefox. I manually resized each page to check flow and behaviour. I viewed the site at various sizes: desktops to mobiles.
 * I also used **[Responsive Design Checker](https://responsivedesignchecker.com)** to check the website performance on a range of devices.
 * I used the W3C Spell Checker to check website spelling.
 
@@ -435,7 +435,7 @@ it is set to display: none. Only seems to happening intermittently.
 
 # **HOW TO CLONE**
 
-![how to clone gif](#.gif)
+![how to clone gif](readmeimages/songbirb-how-to-clone.gif)
 
 * On GitHub.com, navigate to the main page of the repository.
 * Above the list of files, click  Code.
