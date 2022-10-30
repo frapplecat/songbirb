@@ -9,6 +9,7 @@
 - [**UX (USER-EXPERIENCE)**](#ux-user-experience)
 - [**USER STORIES**](#user-stories)
 - [**LOGO**](#logo)
+- [**COLOR PALETTE**](#color-palette)
 - [**FAVICON**](#favicon)
 - [**GAME OVERVIEW**](#game-overview)
 - [**INTRO SPLASH SCREEN**](#intro-splash-screen)
@@ -29,6 +30,7 @@
 - [**KNOWN ISSUES**](#known-issues)
 - [**DEPLOYMENT**](#deployment)
 - [**HOW TO FORK**](#how-to-fork)
+- [**HOW TO CLONE**](#how-to-clone)
 - [**VERSION CONTROL**](#version-control)
 - [**CREDITS**](#credits)
 - [**MUSIC**](#music)
@@ -95,6 +97,13 @@ Even experienced birdwatchers can struggle to recognise the individual calls and
 I used a simple font for the other elements in the game so that everything is easy to read so I thought that I could use a more interesting font for the name. I group a bunch of possibilities together and in the end I chose a font called Embryo.
 
 I felt it was eyecatching and suited the quirky title. I just adjusted the kerning and replaced the superscript-dot over the i with a simple bird icon. I arranged the logo camelCase as a little nod to the javascript module. I like the blocky format and it works well as a solid color or reversed out of a background color.
+
+<br>
+<br>
+<br>
+
+# **COLOR PALETTE**
+![color palette](readmeimages/songbirb-color-palette.png)
 
 <br>
 <br>
@@ -418,6 +427,25 @@ it is set to display: none. Only seems to happening intermittently.
 * Locate the relevant repository, for example: https://github.com/frapplecat/songbirb
 * Click on the 'Fork' button in the top right corner.
 * The forked version of this repo will be generated.
+
+
+<br>
+<br>
+<br>
+
+# **HOW TO CLONE**
+
+![how to clone gif](#.gif)
+
+* On GitHub.com, navigate to the main page of the repository.
+* Above the list of files, click  Code.
+* Copy the URL for the repository.
+* To clone the repository using HTTPS, under "HTTPS", click the clipboard icon for copying the URL.
+* Open Terminal.
+* Change the current working directory to the location where you want the cloned directory.
+* Type git clone, and then paste the URL you copied earlier.
+* $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+* Press Enter to create your local clone.
 
 <br>
 <br>
