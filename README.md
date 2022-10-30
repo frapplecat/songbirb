@@ -455,6 +455,10 @@ it is set to display: none. Only seems to happening intermittently.
 
 I used GITPOD for version control software. Regular git add ., git commit -m, and git push were used to add, save and push the code to the GITHUB Reop where the source code is stored. I adjusted my git commit messages formatting midway through the project to reflect the feedback from my Portfolio 1 Assessment report.
 
+<br>
+<br>
+<br>
+
 # **CREDITS**
 
 * The overall concept is based on the Wordle game
