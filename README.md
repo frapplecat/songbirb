@@ -73,7 +73,6 @@ Even experienced birdwatchers can struggle to recognise the individual calls and
 
 # **USER STORIES**
 
-
 **Visitor Goals**
 
 * I want to be able to discern the purpose of the site quickly
@@ -117,7 +116,6 @@ I selected the 's' from songBirb as the favicon.
 <br>
 <br>
 <br>
-
 
 # **GAME OVERVIEW**
 
@@ -266,7 +264,6 @@ birds to guess by location. Or to be able to orangise a personal array of birdso
 * **Record It Pro** - for screen-capturing video and converting mp4 to gif
 * **GitHub Wiki TOC generator** - for generating README Table of Contents
 
-
 <br>
 <br>
 <br>
@@ -337,7 +334,6 @@ birds to guess by location. Or to be able to orangise a personal array of birdso
 
 ![wave1](readmeimages/wave-evaluation1.png)
 ![wave1](readmeimages/wave-evaluation2.png)
-
 
 <br>
 <br>
@@ -427,7 +423,6 @@ it is set to display: none. Only seems to happening intermittently.
 * Locate the relevant repository, for example: https://github.com/frapplecat/songbirb
 * Click on the 'Fork' button in the top right corner.
 * The forked version of this repo will be generated.
-
 
 <br>
 <br>

@@ -1,17 +1,15 @@
-/*jshint esversion: 6 */
+// To remove ES6 errors in JS Hint
+/* jshint esversion: 6 */
 
-/*
- * Intro
- */
+// Intro
 
 let intro = document.querySelector('.intro');
 let logoSpan = document.querySelectorAll('.logo');
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    /*
-     * Code to stop intro reloading on game refresh
-     */
+// Code to stop intro reloading on game refresh
+
     // skipIntro will either be null, true or false
     let skipIntro = localStorage.getItem('intro');
     // if it's null, create the entry and set to false
@@ -22,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // if skipIntro is false, play the intro
     if (skipIntro == false) {
-        console.log("skip intro false, playing intro...")
+        console.log("skip intro false, playing intro...");
         setTimeout(() => {
             logoSpan.forEach((span) => {
                 span.classList.add('active');
@@ -50,9 +48,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-/*
- * Modal info overlay
- */
+// Modal info overlay
 
 const openModalButtons = document.querySelectorAll('[data-modal-target]');
 const closeModalButtons = document.querySelectorAll('[data-modal-close]');
@@ -93,9 +89,7 @@ function closeModal(modal) {
     overlay.classList.remove('active');
 }
 
-/*
- * Birdsong audio player
- */
+// Birdsong audio player
 
 const musicContainer = document.querySelector('.music-container');
 const playBtn = document.querySelector('#play');
@@ -144,9 +138,7 @@ let birdArray = [{
     }
 ];
 
-/*
- * Code to select a random bird from array
- */
+// Code to select a random bird from array
 
 function getRandomBird() {
     return birdArray[Math.floor(Math.random() * birdArray.length)];
@@ -155,15 +147,11 @@ function getRandomBird() {
 const currentBird = getRandomBird();
 let songIndex = currentBird.birdsong;
 
-/*
- * Code to select the birdsong from the array
- */
+// Code to select the birdsong from the array
 
 loadSong(currentBird.birdsong);
 
-/*
- * Code to update the song details
- */
+// Code to update the song details
 
 function loadSong(song) {
     title.innerText = song;
@@ -222,7 +210,7 @@ function setProgress(e) {
     audio.currentTime = (clickX / width) * duration;
 }
 
-//  EVENT LISTENERS
+//  Play button event listener
 
 playBtn.addEventListener('click', () => {
     const isPlaying = musicContainer.classList.contains('play');
@@ -234,10 +222,7 @@ playBtn.addEventListener('click', () => {
     }
 });
 
-
-/*
- * Code to change song events
- */
+// Code to change song events
 
 prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
@@ -247,9 +232,7 @@ audio.addEventListener('timeupdate', updateProgress);
 progressContainer.addEventListener('click', setProgress);
 
 
-/*
- * SongBirb components
- */
+// SongBirb components
 
 const tileDisplay = document.querySelector('.tile-container');
 const keyboard = document.querySelector('.key-container');
@@ -259,9 +242,7 @@ let songBirb = currentBird.birdname;
 
 const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', '↵', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '⌦'];
 
-/*
- * Keyboard event listener to get key presses
- */
+// Keyboard event listener to get key presses
 
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
@@ -274,9 +255,7 @@ document.addEventListener('keydown', (event) => {
 });
 
 
-/*
- * create guess rows, tiles, keyboard
- */
+// Create guess rows, tiles, keyboard
 
 const guessRows = [
     ['', '', '', '', '', '', '', '', ''],
@@ -348,9 +327,7 @@ const deleteLetter = () => {
     }
 };
 
-/*
- * Check if answer is correct
- */
+// Check if answer is correct
 
 const checkRow = () => {
     const guess = guessRows[currentRow].join('');
@@ -376,9 +353,7 @@ const checkRow = () => {
     }
 };
 
-/*
- *  Refresh game after finishing
- */
+// Refresh game after finishing
 
 const showMessage = (message) => {
     const messageElement = document.createElement('p');
@@ -394,25 +369,21 @@ const showMessage = (message) => {
     refreshButton.addEventListener('click', reloadPage);
 };
 
-/*
- * Add color to keys
- */
+// Add color to keys
 
 const addColorToKey = (keyLetter, color) => {
     const key = document.getElementById(keyLetter);
     key.classList.add(color);
 };
 
-/*
- * Tile flip and add color to tiles
- */
+// Tile flip and add color to tiles
 
 const flipTile = () => {
     const rowTiles = document.querySelector('#guessRow-' + currentRow).childNodes;
     let checkSongBirb = songBirb;
     const guess = [];
 
-    // GREY OVERLAY
+    // Grey overlay
 
     rowTiles.forEach(tile => {
         guess.push({
@@ -421,7 +392,7 @@ const flipTile = () => {
         });
     });
 
-    // GREEN OVERLAY
+    // Green Overlay
 
     guess.forEach((guess, index) => {
         if (guess.letter == songBirb[index]) {
@@ -430,7 +401,7 @@ const flipTile = () => {
         }
     });
 
-    // YELLOW OVERLAY
+    // Yellow Overlay
 
     guess.forEach(guess => {
         if (checkSongBirb.includes(guess.letter)) {
@@ -439,7 +410,7 @@ const flipTile = () => {
         }
     });
 
-    // FLIP
+    // Tile flip
 
     rowTiles.forEach((tile, index) => {
         setTimeout(() => {
